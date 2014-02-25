@@ -1,0 +1,1247 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALIGN	ucl/ucl.h	23;"	d
+ALIGN_INT	ucl/linux/include/stdarg.h	4;"	d
+ALLOC	ucl/alloc.h	24;"	d
+ARRAY	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+ARRAY_OF	ucl/decl.h	/^enum { POINTER_TO, ARRAY_OF, FUNCTION_RETURN };$/;"	e	enum:__anon3
+ASMCode	ucl/x86.c	/^enum ASMCode$/;"	g	file:
+ASMFile	ucl/ucl.c	/^FILE *ASMFile;$/;"	v
+ASMFiles	driver/ucc.c	/^List ASMFiles;$/;"	v
+ASMTemplate	ucl/x86linux.c	/^static char *ASMTemplate[] =$/;"	v	file:
+ASMTemplate	ucl/x86win32.c	/^static char *ASMTemplate[] =$/;"	v	file:
+ASM_CODE	ucl/x86.c	17;"	d	file:
+ASM_FILE	driver/ucc.h	/^enum { C_FILE, PP_FILE, ASM_FILE, OBJ_FILE, LIB_FILE, EXE_FILE };$/;"	e	enum:__anon11
+ASProg	driver/linux.c	/^static char *ASProg[] = $/;"	v	file:
+ASProg	driver/win32.c	/^static char *ASProg[] = $/;"	v	file:
+ASTFile	ucl/ucl.c	/^FILE *ASTFile;$/;"	v
+AST_DECLARATOR_COMMON	ucl/decl.h	7;"	d
+AST_LOOP_STATEMENT_COMMON	ucl/stmt.h	6;"	d
+AST_NODE_COMMON	ucl/ast.h	23;"	d
+AST_STATEMENT_COMMON	ucl/stmt.h	4;"	d
+AddCase	ucl/stmtchk.c	/^static void AddCase(AstSwitchStatement swtchStmt, AstCaseStatement caseStmt)$/;"	f	file:
+AddConstant	ucl/symbol.c	/^Symbol AddConstant(Type ty, union value val)$/;"	f
+AddEnumConstant	ucl/symbol.c	/^Symbol AddEnumConstant(char *name, Type ty, int val)$/;"	f
+AddField	ucl/type.c	/^Field AddField(Type ty, char *id, Type fty, int bits)$/;"	f
+AddFile	driver/ucc.c	/^static void AddFile(char *filename)$/;"	f	file:
+AddFunction	ucl/symbol.c	/^Symbol AddFunction(char *name, Type ty, int sclass)$/;"	f
+AddKeyword	ucl/ucl.c	/^static void AddKeyword(char *str)$/;"	f	file:
+AddOffset	ucl/type.c	/^void AddOffset(RecordType rty, int offset)$/;"	f
+AddParameter	ucl/declchk.c	/^static void AddParameter(Vector params, char *id, Type ty, int reg, Coord coord)$/;"	f	file:
+AddPredecessor	ucl/flow.c	/^static void AddPredecessor(BBlock bb, BBlock p)$/;"	f	file:
+AddString	ucl/symbol.c	/^Symbol AddString(Type ty, String str)$/;"	f
+AddSuccessor	ucl/flow.c	/^static void AddSuccessor(BBlock bb, BBlock s)$/;"	f	file:
+AddSymbol	ucl/symbol.c	/^static Symbol AddSymbol(Table tbl, Symbol sym)$/;"	f	file:
+AddTag	ucl/symbol.c	/^Symbol AddTag(char *name, Type ty)$/;"	f
+AddTypedefName	ucl/symbol.c	/^Symbol AddTypedefName(char *name, Type ty)$/;"	f
+AddVarToReg	ucl/x86.c	/^static void AddVarToReg(Symbol reg, Symbol v)$/;"	f	file:
+AddVariable	ucl/symbol.c	/^Symbol AddVariable(char *name, Type ty, int sclass)$/;"	f
+AddWhiteSpace	ucl/ucl.c	/^static void AddWhiteSpace(char *str)$/;"	f	file:
+AddressOf	ucl/gen.c	/^Symbol AddressOf(Symbol p)$/;"	f
+Adjust	ucl/exprchk.c	/^AstExpression Adjust(AstExpression expr, int rvalue)$/;"	f
+AdjustParameter	ucl/type.c	/^Type AdjustParameter(Type ty)$/;"	f
+Align	ucl/x86linux.c	/^static void Align(Symbol p)$/;"	f	file:
+Align	ucl/x86win32.c	/^static void Align(Symbol p)$/;"	f	file:
+Alloc	driver/ucc.c	/^void* Alloc(int size)$/;"	f
+AllocateReg	ucl/x86.c	/^static void AllocateReg(IRInst inst, int index)$/;"	f	file:
+AppendInst	ucl/gen.c	/^void AppendInst(IRInst inst)$/;"	f
+AppendSTR	ucl/str.c	/^void AppendSTR(String str, char *tmp, int len, int wide)$/;"	f
+ArrayOf	ucl/type.c	/^Type ArrayOf(int len, Type ty)$/;"	f
+AsBreak	ucl/stmt.h	136;"	d
+AsCase	ucl/stmt.h	128;"	d
+AsComp	ucl/stmt.h	138;"	d
+AsCont	ucl/stmt.h	135;"	d
+AsDef	ucl/stmt.h	129;"	d
+AsExpr	ucl/stmt.h	126;"	d
+AsFor	ucl/stmt.h	133;"	d
+AsFunc	ucl/symbol.h	82;"	d
+AsGoto	ucl/stmt.h	134;"	d
+AsIf	ucl/stmt.h	130;"	d
+AsLabel	ucl/stmt.h	127;"	d
+AsLoop	ucl/stmt.h	132;"	d
+AsRet	ucl/stmt.h	137;"	d
+AsSwitch	ucl/stmt.h	131;"	d
+AsVar	ucl/symbol.h	81;"	d
+AstArrayDeclarator	ucl/decl.h	/^} *AstArrayDeclarator;$/;"	t	typeref:struct:astArrayDeclarator
+AstBreakStatement	ucl/stmt.h	/^} *AstBreakStatement;$/;"	t	typeref:struct:astBreakStatement
+AstCaseStatement	ucl/stmt.h	/^} *AstCaseStatement;$/;"	t	typeref:struct:astCaseStatement
+AstCompoundStatement	ucl/stmt.h	/^} *AstCompoundStatement;$/;"	t	typeref:struct:astCompoundStatement
+AstContinueStatement	ucl/stmt.h	/^} *AstContinueStatement;$/;"	t	typeref:struct:astContinueStatement
+AstDeclaration	ucl/ast.h	/^typedef struct astDeclaration     *AstDeclaration;$/;"	t	typeref:struct:astDeclaration
+AstDeclarator	ucl/decl.h	/^} *AstDeclarator;$/;"	t	typeref:struct:astDeclarator
+AstDefaultStatement	ucl/stmt.h	/^} *AstDefaultStatement;$/;"	t	typeref:struct:astDefaultStatement
+AstEnumSpecifier	ucl/decl.h	/^} *AstEnumSpecifier;$/;"	t	typeref:struct:astEnumSpecifier
+AstEnumerator	ucl/decl.h	/^} *AstEnumerator;$/;"	t	typeref:struct:astEnumerator
+AstExpression	ucl/ast.h	/^typedef struct astExpression      *AstExpression;$/;"	t	typeref:struct:astExpression
+AstExpressionStatement	ucl/stmt.h	/^} *AstExpressionStatement;$/;"	t	typeref:struct:astExpressionStatement
+AstForStatement	ucl/stmt.h	/^} *AstForStatement;$/;"	t	typeref:struct:astForStatement
+AstFunction	ucl/decl.h	/^} *AstFunction;$/;"	t	typeref:struct:astFunction
+AstFunctionDeclarator	ucl/decl.h	/^} *AstFunctionDeclarator;$/;"	t	typeref:struct:astFunctionDeclarator
+AstGotoStatement	ucl/stmt.h	/^} *AstGotoStatement;$/;"	t	typeref:struct:astGotoStatement
+AstIfStatement	ucl/stmt.h	/^} *AstIfStatement;$/;"	t	typeref:struct:astIfStatement
+AstInitDeclarator	ucl/decl.h	/^} *AstInitDeclarator;$/;"	t	typeref:struct:astInitDeclarator
+AstInitializer	ucl/decl.h	/^} *AstInitializer;$/;"	t	typeref:struct:astInitializer
+AstLabelStatement	ucl/stmt.h	/^} *AstLabelStatement;$/;"	t	typeref:struct:astLabelStatement
+AstLoopStatement	ucl/stmt.h	/^} *AstLoopStatement;$/;"	t	typeref:struct:astLoopStatement
+AstNode	ucl/ast.h	/^} *AstNode;$/;"	t	typeref:struct:astNode
+AstParameterDeclaration	ucl/decl.h	/^} *AstParameterDeclaration;$/;"	t	typeref:struct:astParameterDeclaration
+AstParameterTypeList	ucl/decl.h	/^} *AstParameterTypeList;$/;"	t	typeref:struct:astParameterTypeList
+AstPointerDeclarator	ucl/decl.h	/^} *AstPointerDeclarator;$/;"	t	typeref:struct:astPointerDeclarator
+AstReturnStatement	ucl/stmt.h	/^} *AstReturnStatement;$/;"	t	typeref:struct:astReturnStatement
+AstSpecifiers	ucl/decl.h	/^typedef struct astSpecifiers *AstSpecifiers;$/;"	t	typeref:struct:astSpecifiers
+AstStatement	ucl/ast.h	/^typedef struct astStatement       *AstStatement;$/;"	t	typeref:struct:astStatement
+AstStructDeclaration	ucl/decl.h	/^} *AstStructDeclaration;$/;"	t	typeref:struct:astStructDeclaration
+AstStructDeclarator	ucl/decl.h	/^} *AstStructDeclarator;$/;"	t	typeref:struct:astStructDeclarator
+AstStructSpecifier	ucl/decl.h	/^} *AstStructSpecifier;$/;"	t	typeref:struct:astStructSpecifier
+AstSwitchStatement	ucl/stmt.h	/^} *AstSwitchStatement;$/;"	t	typeref:struct:astSwitchStatement
+AstToken	ucl/decl.h	/^} *AstToken;$/;"	t	typeref:struct:astToken
+AstTranslationUnit	ucl/ast.h	/^typedef struct astTranslationUnit *AstTranslationUnit;$/;"	t	typeref:struct:astTranslationUnit
+AstTypeName	ucl/ast.h	/^typedef struct astTypeName        *AstTypeName;$/;"	t	typeref:struct:astTypeName
+AstTypedefName	ucl/decl.h	/^} *AstTypedefName;$/;"	t	typeref:struct:astTypedefName
+B	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+BBlock	ucl/symbol.h	/^typedef struct bblock *BBlock;$/;"	t	typeref:struct:bblock
+BINARY_OP	ucl/expr.h	33;"	d
+BORBitField	ucl/declchk.c	/^static AstExpression BORBitField(AstExpression expr1, AstExpression expr2)$/;"	f	file:
+BUF_LEN	ucl/output.c	5;"	d	file:
+BeginPeekToken	ucl/lex.c	/^void BeginPeekToken(void)$/;"	f
+BeginProgram	ucl/x86linux.c	/^void BeginProgram(void)$/;"	f
+BeginProgram	ucl/x86win32.c	/^void BeginProgram(void)$/;"	f
+BinaryOPCheckers	ucl/exprchk.c	/^static AstExpression (* BinaryOPCheckers[])(AstExpression) = $/;"	v	file:
+BothArithType	ucl/type.h	89;"	d
+BothIntegType	ucl/type.h	88;"	d
+BothScalarType	ucl/type.h	90;"	d
+BufferSize	ucl/output.c	/^int BufferSize;$/;"	v
+BuildCommand	driver/ucc.c	/^char** BuildCommand(char *cmd[], List flags, List infiles, List outfiles)$/;"	f
+CALLOC	ucl/alloc.h	25;"	d
+CC	driver/Makefile	/^CC          = gcc$/;"	m
+CC	ucl/Makefile	/^CC          = gcc$/;"	m
+CCProg	driver/linux.c	/^static char *CCProg[] = $/;"	v	file:
+CCProg	driver/win32.c	/^static char *CCProg[] = $/;"	v	file:
+CFGEdge	ucl/gen.h	/^} *CFGEdge;$/;"	t	typeref:struct:cfgedge
+CFLAGS	driver/Makefile	/^CFLAGS      = -g$/;"	m
+CFLAGS	ucl/Makefile	/^CFLAGS      = -g -D_UCC$/;"	m
+CHAR	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+CHAR_BIT	ucl/linux/include/limits.h	4;"	d
+CHAR_MAX	ucl/linux/include/limits.h	23;"	d
+CHAR_MAX	ucl/linux/include/limits.h	26;"	d
+CHAR_MIN	ucl/linux/include/limits.h	24;"	d
+CHAR_MIN	ucl/linux/include/limits.h	27;"	d
+CHAR_SIZE	ucl/config.h	7;"	d
+CODE	ucl/target.h	/^enum { CODE, DATA };$/;"	e	enum:__anon7
+CONST	ucl/type.h	/^enum { CONST = 0x1, VOLATILE = 0x2 };$/;"	e	enum:__anon9
+CPPProg	driver/linux.c	/^static char *CPPProg[] = $/;"	v	file:
+CPPProg	driver/win32.c	/^static char *CPPProg[] = $/;"	v	file:
+CREATE_AST_NODE	ucl/ast.h	56;"	d
+CURRENTF	ucl/declchk.c	/^AstFunction CURRENTF;$/;"	v
+CURSOR	ucl/lex.c	5;"	d	file:
+C_FILE	driver/ucc.h	/^enum { C_FILE, PP_FILE, ASM_FILE, OBJ_FILE, LIB_FILE, EXE_FILE };$/;"	e	enum:__anon11
+C_SRC	ucl/Makefile	/^C_SRC       = alloc.c ast.c decl.c declchk.c dumpast.c emit.c \\$/;"	m
+CanAssign	ucl/exprchk.c	/^int CanAssign(Type lty, AstExpression expr)$/;"	f
+CanModify	ucl/exprchk.c	/^static int CanModify(AstExpression expr)$/;"	f	file:
+Cast	ucl/exprchk.c	/^AstExpression Cast(Type ty, AstExpression expr)$/;"	f
+CastExpression	ucl/exprchk.c	/^static AstExpression CastExpression(Type ty, AstExpression expr)$/;"	f	file:
+CheckAddOP	ucl/exprchk.c	/^static AstExpression CheckAddOP(AstExpression expr)$/;"	f	file:
+CheckAddressConstant	ucl/declchk.c	/^static AstExpression CheckAddressConstant(AstExpression expr)$/;"	f	file:
+CheckArgument	ucl/exprchk.c	/^static AstExpression CheckArgument(FunctionType fty, AstExpression arg, int argNo, int *argFull)$/;"	f	file:
+CheckArrayDeclarator	ucl/declchk.c	/^static void CheckArrayDeclarator(AstArrayDeclarator arrDec)$/;"	f	file:
+CheckAssignmentExpression	ucl/exprchk.c	/^static AstExpression CheckAssignmentExpression(AstExpression expr)$/;"	f	file:
+CheckBinaryExpression	ucl/exprchk.c	/^static AstExpression CheckBinaryExpression(AstExpression expr)$/;"	f	file:
+CheckBitwiseOP	ucl/exprchk.c	/^static AstExpression CheckBitwiseOP(AstExpression expr)$/;"	f	file:
+CheckBreakStatement	ucl/stmtchk.c	/^static AstStatement CheckBreakStatement(AstStatement stmt)$/;"	f	file:
+CheckCaseStatement	ucl/stmtchk.c	/^static AstStatement CheckCaseStatement(AstStatement stmt)$/;"	f	file:
+CheckCommaExpression	ucl/exprchk.c	/^static AstExpression CheckCommaExpression(AstExpression expr)$/;"	f	file:
+CheckCompoundStatement	ucl/stmtchk.c	/^AstStatement CheckCompoundStatement(AstStatement stmt)$/;"	f
+CheckConditionalExpression	ucl/exprchk.c	/^static AstExpression CheckConditionalExpression(AstExpression expr)$/;"	f	file:
+CheckConstantExpression	ucl/exprchk.c	/^AstExpression CheckConstantExpression(AstExpression expr)$/;"	f
+CheckContinueStatement	ucl/stmtchk.c	/^static AstStatement CheckContinueStatement(AstStatement stmt)$/;"	f	file:
+CheckDeclarationSpecifiers	ucl/declchk.c	/^static void CheckDeclarationSpecifiers(AstSpecifiers specs)$/;"	f	file:
+CheckDeclarator	ucl/declchk.c	/^static void CheckDeclarator(AstDeclarator dec)$/;"	f	file:
+CheckDefaultStatement	ucl/stmtchk.c	/^static AstStatement CheckDefaultStatement(AstStatement stmt)$/;"	f	file:
+CheckEnumSpecifier	ucl/declchk.c	/^static Type CheckEnumSpecifier(AstEnumSpecifier enumSpec)$/;"	f	file:
+CheckEnumerator	ucl/declchk.c	/^static int CheckEnumerator(AstEnumerator enumer, int last, Type ty)$/;"	f	file:
+CheckEqualityOP	ucl/exprchk.c	/^static AstExpression CheckEqualityOP(AstExpression expr)$/;"	f	file:
+CheckErrorExpression	ucl/exprchk.c	/^static AstExpression CheckErrorExpression(AstExpression expr)$/;"	f	file:
+CheckExpression	ucl/exprchk.c	/^AstExpression CheckExpression(AstExpression expr)$/;"	f
+CheckExpressionStatement	ucl/stmtchk.c	/^static AstStatement CheckExpressionStatement(AstStatement stmt)$/;"	f	file:
+CheckForStatement	ucl/stmtchk.c	/^static AstStatement CheckForStatement(AstStatement stmt)$/;"	f	file:
+CheckFunction	ucl/declchk.c	/^void CheckFunction(AstFunction func)$/;"	f
+CheckFunctionCall	ucl/exprchk.c	/^static AstExpression CheckFunctionCall(AstExpression expr)$/;"	f	file:
+CheckFunctionDeclarator	ucl/declchk.c	/^static void CheckFunctionDeclarator(AstFunctionDeclarator dec)$/;"	f	file:
+CheckGlobalDeclaration	ucl/declchk.c	/^static void CheckGlobalDeclaration(AstDeclaration decl)$/;"	f	file:
+CheckGotoStatement	ucl/stmtchk.c	/^static AstStatement CheckGotoStatement(AstStatement stmt)$/;"	f	file:
+CheckIDDeclaration	ucl/declchk.c	/^static void CheckIDDeclaration(AstFunctionDeclarator funcDec, AstDeclaration decl)$/;"	f	file:
+CheckIfStatement	ucl/stmtchk.c	/^static AstStatement CheckIfStatement(AstStatement stmt)$/;"	f	file:
+CheckInitConstant	ucl/declchk.c	/^static void CheckInitConstant(AstInitializer init)$/;"	f	file:
+CheckInitializer	ucl/declchk.c	/^static void CheckInitializer(AstInitializer init, Type ty)$/;"	f	file:
+CheckInitializerInternal	ucl/declchk.c	/^static AstInitializer CheckInitializerInternal(InitData *tail, AstInitializer init, Type ty, $/;"	f	file:
+CheckLabelStatement	ucl/stmtchk.c	/^static AstStatement CheckLabelStatement(AstStatement stmt)$/;"	f	file:
+CheckLocalCompound	ucl/stmtchk.c	/^static AstStatement CheckLocalCompound(AstStatement stmt)$/;"	f	file:
+CheckLocalDeclaration	ucl/declchk.c	/^void CheckLocalDeclaration(AstDeclaration decl, Vector v)$/;"	f
+CheckLogicalOP	ucl/exprchk.c	/^static AstExpression CheckLogicalOP(AstExpression expr)$/;"	f	file:
+CheckLoopStatement	ucl/stmtchk.c	/^static AstStatement CheckLoopStatement(AstStatement stmt)$/;"	f	file:
+CheckMemberAccess	ucl/exprchk.c	/^static AstExpression CheckMemberAccess(AstExpression expr)$/;"	f	file:
+CheckMultiplicativeOP	ucl/exprchk.c	/^static AstExpression CheckMultiplicativeOP(AstExpression expr)$/;"	f	file:
+CheckParameterDeclaration	ucl/declchk.c	/^static void CheckParameterDeclaration(AstFunctionDeclarator funcDec,$/;"	f	file:
+CheckParameterTypeList	ucl/declchk.c	/^static void CheckParameterTypeList(AstFunctionDeclarator funcDec)$/;"	f	file:
+CheckPointerDeclarator	ucl/declchk.c	/^static void CheckPointerDeclarator(AstPointerDeclarator ptrDec)$/;"	f	file:
+CheckPostfixExpression	ucl/exprchk.c	/^static AstExpression CheckPostfixExpression(AstExpression expr)$/;"	f	file:
+CheckPrimaryExpression	ucl/exprchk.c	/^static AstExpression CheckPrimaryExpression(AstExpression expr)$/;"	f	file:
+CheckRelationalOP	ucl/exprchk.c	/^static AstExpression CheckRelationalOP(AstExpression expr)$/;"	f	file:
+CheckReturnStatement	ucl/stmtchk.c	/^static AstStatement CheckReturnStatement(AstStatement stmt)$/;"	f	file:
+CheckShiftOP	ucl/exprchk.c	/^static AstExpression CheckShiftOP(AstExpression expr)$/;"	f	file:
+CheckStatement	ucl/stmtchk.c	/^static AstStatement CheckStatement(AstStatement stmt)$/;"	f	file:
+CheckStructDeclaration	ucl/declchk.c	/^static void CheckStructDeclaration(AstStructDeclaration stDecl, Type rty)$/;"	f	file:
+CheckStructDeclarator	ucl/declchk.c	/^static void CheckStructDeclarator(Type rty, AstStructDeclarator stDec, Type fty)$/;"	f	file:
+CheckStructOrUnionSpecifier	ucl/declchk.c	/^static Type CheckStructOrUnionSpecifier(AstStructSpecifier stSpec)$/;"	f	file:
+CheckSubOP	ucl/exprchk.c	/^static AstExpression CheckSubOP(AstExpression expr)$/;"	f	file:
+CheckSwitchStatement	ucl/stmtchk.c	/^static AstStatement CheckSwitchStatement(AstStatement stmt)$/;"	f	file:
+CheckTranslationUnit	ucl/declchk.c	/^void CheckTranslationUnit(AstTranslationUnit transUnit)$/;"	f
+CheckTypeCast	ucl/exprchk.c	/^static AstExpression CheckTypeCast(AstExpression expr)$/;"	f	file:
+CheckTypeName	ucl/declchk.c	/^Type CheckTypeName(AstTypeName tname)$/;"	f
+CheckTypedef	ucl/declchk.c	/^static void CheckTypedef(AstDeclaration decl)$/;"	f	file:
+CheckTypedefName	ucl/decl.c	/^static void CheckTypedefName(int sclass, char *id)$/;"	f	file:
+CheckUnaryExpression	ucl/exprchk.c	/^static AstExpression CheckUnaryExpression(AstExpression expr)$/;"	f	file:
+ClearRegs	ucl/reg.c	/^void ClearRegs(void)$/;"	f
+CloseSourceFile	ucl/input.c	/^void CloseSourceFile(void)$/;"	f
+Command	driver/ucc.c	/^static char **Command;$/;"	v	file:
+CommonRealType	ucl/type.c	/^Type CommonRealType(Type ty1, Type ty2)$/;"	f
+Compile	ucl/ucl.c	/^static void Compile(char *file)$/;"	f	file:
+CompositeType	ucl/type.c	/^Type CompositeType(Type ty1, Type ty2)$/;"	f
+Constant	ucl/fold.c	/^AstExpression Constant(struct coord coord, Type ty, union value val)$/;"	f
+Constant0	ucl/expr.c	/^AstExpression Constant0;$/;"	v
+Constants	ucl/symbol.c	/^static struct table Constants;$/;"	v	typeref:struct:table	file:
+Coord	ucl/input.h	/^} *Coord;$/;"	t	typeref:struct:coord
+CreateBBlock	ucl/gen.c	/^BBlock CreateBBlock(void)$/;"	f
+CreateLabel	ucl/symbol.c	/^Symbol CreateLabel(void)$/;"	f
+CreateOffset	ucl/symbol.c	/^Symbol CreateOffset(Type ty, Symbol base, int coff)$/;"	f
+CreateOutput	ucl/output.c	/^FILE* CreateOutput(char *filename, char *ext)$/;"	f
+CreateReg	ucl/reg.c	/^Symbol CreateReg(char *name, char *iname, int no)$/;"	f
+CreateTemp	ucl/symbol.c	/^Symbol CreateTemp(Type ty)$/;"	f
+CreateVector	ucl/vector.c	/^Vector CreateVector(int size)$/;"	f
+CurrentBB	ucl/gen.c	/^BBlock CurrentBB;$/;"	v
+CurrentHeap	ucl/ucl.c	/^Heap CurrentHeap;$/;"	v
+CurrentToken	ucl/ast.c	/^int CurrentToken;$/;"	v
+CurrentTokenIn	ucl/ast.c	/^int CurrentTokenIn(int toks[])$/;"	f
+DATA	ucl/target.h	/^enum { CODE, DATA };$/;"	e	enum:__anon7
+DAssemFunction	ucl/uildasm.c	/^void DAssemFunction(AstFunction func)$/;"	f
+DAssemTranslationUnit	ucl/uildasm.c	/^void DAssemTranslationUnit(AstTranslationUnit transUnit)$/;"	f
+DAssemUIL	ucl/uildasm.c	/^static void DAssemUIL(IRInst inst)$/;"	f	file:
+DBL_DIG	ucl/linux/include/float.h	17;"	d
+DBL_EPSILON	ucl/linux/include/float.h	18;"	d
+DBL_MANT_DIG	ucl/linux/include/float.h	19;"	d
+DBL_MAX	ucl/linux/include/float.h	20;"	d
+DBL_MAX_10_EXP	ucl/linux/include/float.h	21;"	d
+DBL_MAX_EXP	ucl/linux/include/float.h	22;"	d
+DBL_MIN	ucl/linux/include/float.h	23;"	d
+DBL_MIN_10_EXP	ucl/linux/include/float.h	24;"	d
+DBL_MIN_EXP	ucl/linux/include/float.h	25;"	d
+DEC_ABSTRACT	ucl/decl.h	/^enum { DEC_ABSTRACT = 0x01, DEC_CONCRETE = 0x02};$/;"	e	enum:__anon2
+DEC_CONCRETE	ucl/decl.h	/^enum { DEC_ABSTRACT = 0x01, DEC_CONCRETE = 0x02};$/;"	e	enum:__anon2
+DOUBLE	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+DOUBLE_SIZE	ucl/config.h	13;"	d
+DST	ucl/uildasm.c	7;"	d	file:
+DST	ucl/x86.c	18;"	d	file:
+DefaultFunctionType	ucl/type.c	/^Type DefaultFunctionType;$/;"	v
+DefineAddress	ucl/x86linux.c	/^void DefineAddress(Symbol p)$/;"	f
+DefineAddress	ucl/x86win32.c	/^void DefineAddress(Symbol p)$/;"	f
+DefineCommData	ucl/x86linux.c	/^void DefineCommData(Symbol p)$/;"	f
+DefineCommData	ucl/x86win32.c	/^void DefineCommData(Symbol p)$/;"	f
+DefineFloatConstant	ucl/x86linux.c	/^void DefineFloatConstant(Symbol p)$/;"	f
+DefineFloatConstant	ucl/x86win32.c	/^void DefineFloatConstant(Symbol p)$/;"	f
+DefineGlobal	ucl/x86linux.c	/^void DefineGlobal(Symbol p)$/;"	f
+DefineGlobal	ucl/x86win32.c	/^void DefineGlobal(Symbol p)$/;"	f
+DefineLabel	ucl/x86linux.c	/^void DefineLabel(Symbol p)$/;"	f
+DefineLabel	ucl/x86win32.c	/^void DefineLabel(Symbol p)$/;"	f
+DefineString	ucl/x86linux.c	/^void DefineString(String str, int size)$/;"	f
+DefineString	ucl/x86win32.c	/^void DefineString(String str, int size)$/;"	f
+DefineTemp	ucl/gen.c	/^void DefineTemp(Symbol t, int op, Symbol src1, Symbol src2)$/;"	f
+DefineValue	ucl/x86linux.c	/^void DefineValue(Type ty, union value val)$/;"	f
+DefineValue	ucl/x86win32.c	/^void DefineValue(Type ty, union value val)$/;"	f
+Deref	ucl/gen.c	/^Symbol Deref(Type ty, Symbol addr)$/;"	f
+DeriveType	ucl/declchk.c	/^static Type DeriveType(TypeDerivList tyDrvList, Type ty)$/;"	f	file:
+DoIntegerPromotion	ucl/exprchk.c	/^AstExpression DoIntegerPromotion(AstExpression expr)$/;"	f
+DrawCFGEdge	ucl/flow.c	/^void DrawCFGEdge(BBlock head, BBlock tail)$/;"	f
+DumpAST	ucl/ucl.c	/^static int DumpAST;$/;"	v	file:
+DumpExpression	ucl/dumpast.c	/^static void DumpExpression(AstExpression expr, int pos)$/;"	f	file:
+DumpFunction	ucl/dumpast.c	/^static void DumpFunction(AstFunction func)$/;"	f	file:
+DumpIR	ucl/ucl.c	/^static int DumpIR;$/;"	v	file:
+DumpStatement	ucl/dumpast.c	/^static void DumpStatement(AstStatement stmt, int pos)$/;"	f	file:
+DumpTranslationUnit	ucl/dumpast.c	/^void DumpTranslationUnit(AstTranslationUnit transUnit)$/;"	f
+EAX	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+EBP	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+EBX	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+ECX	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+EDI	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+EDX	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+ELFHash	ucl/str.c	/^static unsigned int ELFHash(char *str, int len)$/;"	f	file:
+ENDFOR	ucl/vector.h	33;"	d
+END_OF_FILE	ucl/input.c	/^unsigned char END_OF_FILE = 255;$/;"	v
+ENUM	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+ESI	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+ESP	ucl/reg.h	/^enum { EAX, ECX, EDX, EBX, ESP, EBP, ESI, EDI };$/;"	e	enum:__anon1
+EXECUTE_BOP	ucl/fold.c	5;"	d	file:
+EXECUTE_ROP	ucl/fold.c	11;"	d	file:
+EXE_FILE	driver/ucc.h	/^enum { C_FILE, PP_FILE, ASM_FILE, OBJ_FILE, LIB_FILE, EXE_FILE };$/;"	e	enum:__anon11
+EliminateCode	ucl/simp.c	/^static void EliminateCode(BBlock bb)$/;"	f	file:
+EmitAddress	ucl/x86.c	/^static void EmitAddress(IRInst inst)$/;"	f	file:
+EmitAssign	ucl/x86.c	/^static void EmitAssign(IRInst inst)$/;"	f	file:
+EmitBBlock	ucl/x86.c	/^static void EmitBBlock(BBlock bb)$/;"	f	file:
+EmitBranch	ucl/x86.c	/^static void EmitBranch(IRInst inst)$/;"	f	file:
+EmitCall	ucl/x86.c	/^static void EmitCall(IRInst inst)$/;"	f	file:
+EmitCast	ucl/x86.c	/^static void EmitCast(IRInst inst)$/;"	f	file:
+EmitClear	ucl/x86.c	/^static void EmitClear(IRInst inst)$/;"	f	file:
+EmitDec	ucl/x86.c	/^static void EmitDec(IRInst inst)$/;"	f	file:
+EmitDeref	ucl/x86.c	/^static void EmitDeref(IRInst inst)$/;"	f	file:
+EmitEpilogue	ucl/x86.c	/^static void EmitEpilogue(int stksize)$/;"	f	file:
+EmitFloatConstants	ucl/emit.c	/^void EmitFloatConstants(void)$/;"	f
+EmitFunction	ucl/x86.c	/^void EmitFunction(FunctionSymbol fsym)$/;"	f
+EmitFunctions	ucl/emit.c	/^static void EmitFunctions(AstTranslationUnit transUnit)$/;"	f	file:
+EmitGlobals	ucl/emit.c	/^static void EmitGlobals(void)$/;"	f	file:
+EmitIRInst	ucl/x86.c	/^static void EmitIRInst(IRInst inst)$/;"	f	file:
+EmitInc	ucl/x86.c	/^static void EmitInc(IRInst inst)$/;"	f	file:
+EmitIndirectJump	ucl/x86.c	/^static void EmitIndirectJump(IRInst inst)$/;"	f	file:
+EmitIndirectMove	ucl/x86.c	/^static void EmitIndirectMove(IRInst inst)$/;"	f	file:
+EmitJump	ucl/x86.c	/^static void EmitJump(IRInst inst)$/;"	f	file:
+EmitMove	ucl/x86.c	/^static void EmitMove(IRInst inst)$/;"	f	file:
+EmitMoveBlock	ucl/x86.c	/^static void EmitMoveBlock(IRInst inst)$/;"	f	file:
+EmitNOP	ucl/x86.c	/^static void EmitNOP(IRInst inst)$/;"	f	file:
+EmitPrologue	ucl/x86.c	/^static void EmitPrologue(int stksize)$/;"	f	file:
+EmitReturn	ucl/x86.c	/^static void EmitReturn(IRInst inst)$/;"	f	file:
+EmitStrings	ucl/emit.c	/^static void EmitStrings(void)$/;"	f	file:
+EmitTranslationUnit	ucl/emit.c	/^void EmitTranslationUnit(AstTranslationUnit transUnit)$/;"	f
+EmitX87Assign	ucl/x86.c	/^static void EmitX87Assign(IRInst inst, int tcode)$/;"	f	file:
+EmitX87Branch	ucl/x86.c	/^static void EmitX87Branch(IRInst inst, int tcode)$/;"	f	file:
+EmitX87Move	ucl/x86.c	/^static void EmitX87Move(IRInst inst, int tcode)$/;"	f	file:
+Emitter	ucl/x86.c	/^static void (* Emitter[])(IRInst inst) = $/;"	v	file:
+EndPeekToken	ucl/lex.c	/^void EndPeekToken(void)$/;"	f
+EndProgram	ucl/x86linux.c	/^void EndProgram(void)$/;"	f
+EndProgram	ucl/x86win32.c	/^void EndProgram(void)$/;"	f
+EndRecord	ucl/type.c	/^void EndRecord(Type ty)$/;"	f
+EnterScope	ucl/symbol.c	/^void EnterScope(void)$/;"	f
+Enum	ucl/type.c	/^Type Enum(char *id)$/;"	f
+EnumType	ucl/type.h	/^} *EnumType;$/;"	t	typeref:struct:enumType
+Error	ucl/error.c	/^void Error(Coord coord, const char *format, ...)$/;"	f
+ErrorCount	ucl/ucl.c	/^int ErrorCount;$/;"	v
+ExamineJump	ucl/flow.c	/^void ExamineJump(BBlock bb)$/;"	f
+Execute	driver/linux.c	/^static int Execute(char **cmd)$/;"	f	file:
+ExitScope	ucl/symbol.c	/^void ExitScope(void)$/;"	f
+ExpandVector	ucl/vector.c	/^void ExpandVector(Vector v)$/;"	f
+Expect	ucl/ast.c	/^void Expect(int tok)$/;"	f
+Export	ucl/x86linux.c	/^void Export(Symbol p)$/;"	f
+Export	ucl/x86win32.c	/^void Export(Symbol p)$/;"	f
+ExprCheckers	ucl/exprchk.c	/^static AstExpression (* ExprCheckers[])(AstExpression) = $/;"	v	file:
+ExprTrans	ucl/tranexpr.c	/^static Symbol (* ExprTrans[])(AstExpression) = $/;"	v	file:
+ExtName	ucl/ucl.c	/^char *ExtName = ".s";$/;"	v
+ExtNames	driver/linux.c	/^char *ExtNames[] = { ".c", ".i", ".s", ".o", ".a;.so", 0 };$/;"	v
+ExtNames	driver/win32.c	/^char *ExtNames[] = { ".c;.C,", ".i;.I", ".asm;.ASM;.s;.S", ".obj;.OBJ", ".lib", 0 };$/;"	v
+ExtraKeywords	ucl/ucl.c	/^Vector ExtraKeywords;$/;"	v
+ExtraWhiteSpace	ucl/ucl.c	/^Vector ExtraWhiteSpace;$/;"	v
+F4	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+F8	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+FF_StructDeclaration	ucl/decl.c	/^static int FF_StructDeclaration[]      = { FIRST_DECLARATION, TK_RBRACE, 0};$/;"	v	file:
+FIRST_DECLARATION	ucl/grammer.h	4;"	d
+FIRST_Declaration	ucl/decl.c	/^int FIRST_Declaration[] = { FIRST_DECLARATION, 0};$/;"	v
+FIRST_EXPRESSION	ucl/grammer.h	10;"	d
+FIRST_ExternalDeclaration	ucl/decl.c	/^static int FIRST_ExternalDeclaration[] = { FIRST_DECLARATION, TK_MUL, TK_LPAREN, 0};$/;"	v	file:
+FIRST_Function	ucl/decl.c	/^static int FIRST_Function[]            = { FIRST_DECLARATION, TK_LBRACE, 0};$/;"	v	file:
+FIRST_STATEMENT	ucl/grammer.h	17;"	d
+FIRST_Statement	ucl/stmt.c	/^static int FIRST_Statement[] = { FIRST_STATEMENT, 0};$/;"	v	file:
+FIRST_StructDeclaration	ucl/decl.c	/^static int FIRST_StructDeclaration[]   = { FIRST_DECLARATION, 0};$/;"	v	file:
+FLOAT	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+FLOAT_SIZE	ucl/config.h	12;"	d
+FLT_DIG	ucl/linux/include/float.h	7;"	d
+FLT_EPSILON	ucl/linux/include/float.h	8;"	d
+FLT_MANT_DIG	ucl/linux/include/float.h	9;"	d
+FLT_MAX	ucl/linux/include/float.h	10;"	d
+FLT_MAX_10_EXP	ucl/linux/include/float.h	11;"	d
+FLT_MAX_EXP	ucl/linux/include/float.h	12;"	d
+FLT_MIN	ucl/linux/include/float.h	13;"	d
+FLT_MIN_10_EXP	ucl/linux/include/float.h	14;"	d
+FLT_MIN_EXP	ucl/linux/include/float.h	15;"	d
+FLT_RADIX	ucl/linux/include/float.h	5;"	d
+FLT_ROUNDS	ucl/linux/include/float.h	4;"	d
+FOR_EACH_ITEM	ucl/vector.h	25;"	d
+FSYM	ucl/declchk.c	/^FunctionSymbol FSYM;$/;"	v
+FUNCTION	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+FUNCTION_RETURN	ucl/decl.h	/^enum { POINTER_TO, ARRAY_OF, FUNCTION_RETURN };$/;"	e	enum:__anon3
+Fatal	ucl/error.c	/^void Fatal(const char *format, ...)$/;"	f
+Field	ucl/type.h	/^} *Field;$/;"	t	typeref:struct:field
+FileHeap	ucl/ucl.c	/^HEAP(FileHeap);$/;"	v
+FileName	driver/ucc.c	/^char* FileName(char *name, char *ext)$/;"	f
+Finalize	ucl/ucl.c	/^static void Finalize(void)$/;"	f	file:
+FindEmptyReg	ucl/reg.c	/^static int FindEmptyReg(int endr)$/;"	f	file:
+FindKeyword	ucl/lex.c	/^static int FindKeyword(char *str, int len)$/;"	f	file:
+FloatConstants	ucl/symbol.c	/^Symbol FloatConstants;$/;"	v
+FloatNum	ucl/x86linux.c	/^static int FloatNum;$/;"	v	file:
+FloatNum	ucl/x86win32.c	/^static int FloatNum;$/;"	v	file:
+FloatTail	ucl/symbol.c	/^static Symbol *FunctionTail, *GlobalTail, *StringTail, *FloatTail;$/;"	v	file:
+Flush	ucl/output.c	/^void Flush(void)$/;"	f
+FoldCast	ucl/fold.c	/^AstExpression FoldCast(Type ty, AstExpression expr)$/;"	f
+FoldConstant	ucl/fold.c	/^AstExpression FoldConstant(AstExpression expr)$/;"	f
+FormatName	ucl/output.c	/^char* FormatName(const char *fmt, ...)$/;"	f
+FreeBlocks	ucl/alloc.c	/^static struct mblock *FreeBlocks;$/;"	v	typeref:struct:mblock	file:
+FreeHeap	ucl/alloc.c	/^void FreeHeap(Heap hp)$/;"	f
+FunctionReturn	ucl/type.c	/^Type FunctionReturn(Type ty, Signature sig)$/;"	f
+FunctionSymbol	ucl/symbol.h	/^} *FunctionSymbol;$/;"	t	typeref:struct:functionSymbol
+FunctionTail	ucl/symbol.c	/^static Symbol *FunctionTail, *GlobalTail, *StringTail, *FloatTail;$/;"	v	file:
+FunctionType	ucl/type.h	/^} *FunctionType;$/;"	t	typeref:struct:functionType
+Functions	ucl/symbol.c	/^Symbol Functions;$/;"	v
+GET_ITEM	ucl/vector.h	21;"	d
+GenerateAssign	ucl/gen.c	/^void GenerateAssign(Type ty, Symbol dst, int opcode, Symbol src1, Symbol src2)$/;"	f
+GenerateBranch	ucl/gen.c	/^void GenerateBranch(Type ty, BBlock dstBB, int opcode, Symbol src1, Symbol src2)$/;"	f
+GenerateClear	ucl/gen.c	/^void GenerateClear(Symbol dst, int size)$/;"	f
+GenerateFunctionCall	ucl/gen.c	/^void GenerateFunctionCall(Type ty, Symbol recv, Symbol faddr, Vector args)$/;"	f
+GenerateIndirectJump	ucl/gen.c	/^void GenerateIndirectJump(BBlock *dstBBs, int len, Symbol index)$/;"	f
+GenerateIndirectMove	ucl/gen.c	/^void GenerateIndirectMove(Type ty, Symbol dst, Symbol src)$/;"	f
+GenerateJump	ucl/gen.c	/^void GenerateJump(BBlock dstBB)$/;"	f
+GenerateMove	ucl/gen.c	/^void GenerateMove(Type ty, Symbol dst, Symbol src)$/;"	f
+GenerateReturn	ucl/gen.c	/^void GenerateReturn(Type ty, Symbol src)$/;"	f
+GetAccessName	ucl/x86linux.c	/^static char* GetAccessName(Symbol p)$/;"	f	file:
+GetAccessName	ucl/x86win32.c	/^static char* GetAccessName(Symbol p)$/;"	f	file:
+GetByteReg	ucl/reg.c	/^Symbol GetByteReg(void)$/;"	f
+GetFileType	driver/ucc.c	/^static int GetFileType(char *filename)$/;"	f	file:
+GetFunctionDeclarator	ucl/decl.c	/^static AstFunctionDeclarator GetFunctionDeclarator(AstInitDeclarator initDec)$/;"	f	file:
+GetNextToken	ucl/lex.c	/^int GetNextToken(void)$/;"	f
+GetOutermostID	ucl/decl.c	/^static char* GetOutermostID(AstDeclarator dec)$/;"	f	file:
+GetReg	ucl/reg.c	/^Symbol GetReg(void)$/;"	f
+GetRegInternal	ucl/reg.c	/^static Symbol GetRegInternal(int width)$/;"	f	file:
+GetWordReg	ucl/reg.c	/^Symbol GetWordReg(void)$/;"	f
+GlobalIDs	ucl/symbol.c	/^static struct table GlobalIDs;$/;"	v	typeref:struct:table	file:
+GlobalTags	ucl/symbol.c	/^static struct table GlobalTags;$/;"	v	typeref:struct:table	file:
+GlobalTail	ucl/symbol.c	/^static Symbol *FunctionTail, *GlobalTail, *StringTail, *FloatTail;$/;"	v	file:
+Globals	ucl/symbol.c	/^Symbol Globals;$/;"	v
+HEAP	ucl/alloc.h	27;"	d
+HIGH_1BIT	ucl/lex.h	29;"	d
+HIGH_3BIT	ucl/lex.h	28;"	d
+HIGH_4BIT	ucl/lex.h	27;"	d
+HUGE_VAL	ucl/linux/include/math.h	4;"	d
+HasSideEffect	ucl/transtmt.c	/^static int HasSideEffect(AstExpression expr)$/;"	f	file:
+Heap	ucl/alloc.h	/^} *Heap;$/;"	t	typeref:struct:heap
+HeapAllocate	ucl/alloc.c	/^void* HeapAllocate(Heap hp, int size)$/;"	f
+I1	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+I2	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+I4	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+ILArg	ucl/gen.h	/^} *ILArg;$/;"	t	typeref:struct:ilarg
+INSERT_ITEM	ucl/vector.h	13;"	d
+INT	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+INT_MAX	ucl/linux/include/limits.h	14;"	d
+INT_MIN	ucl/linux/include/limits.h	19;"	d
+INT_SIZE	ucl/config.h	9;"	d
+IRFile	ucl/ucl.c	/^FILE *IRFile;$/;"	v
+IRInst	ucl/gen.h	/^} *IRInst;$/;"	t	typeref:struct:irinst
+Identifiers	ucl/symbol.c	/^static Table Identifiers;$/;"	v	file:
+Import	ucl/x86linux.c	/^void Import(Symbol p)$/;"	f
+Import	ucl/x86win32.c	/^void Import(Symbol p)$/;"	f
+ImportFunctions	ucl/emit.c	/^static void ImportFunctions(void)$/;"	f	file:
+InitData	ucl/symbol.h	/^typedef struct initData *InitData;$/;"	t	typeref:struct:initData
+InitHeap	ucl/alloc.c	/^void InitHeap(Heap hp)$/;"	f
+InitSymbolTable	ucl/symbol.c	/^void InitSymbolTable(void)$/;"	f
+Initialize	ucl/ucl.c	/^static void Initialize(void)$/;"	f	file:
+Input	ucl/input.c	/^struct input Input;$/;"	v	typeref:struct:input
+IntConstant	ucl/symbol.c	/^Symbol IntConstant(int i)$/;"	f
+InternName	ucl/str.c	/^char* InternName(char *id, int len)$/;"	f
+InvokeProgram	driver/linux.c	/^int InvokeProgram(int oftype)$/;"	f
+InvokeProgram	driver/win32.c	/^int InvokeProgram(int oftype)$/;"	f
+IsArithType	ucl/type.h	77;"	d
+IsBinaryOP	ucl/expr.h	32;"	d
+IsCommute	ucl/gen.c	4;"	d	file:
+IsCompatibleFunction	ucl/type.c	/^static int IsCompatibleFunction(FunctionType fty1, FunctionType fty2)$/;"	f	file:
+IsCompatiblePtr	ucl/type.h	91;"	d
+IsCompatibleType	ucl/type.c	/^int IsCompatibleType(Type ty1, Type ty2)$/;"	f
+IsDigit	ucl/lex.h	21;"	d
+IsFunctionType	ucl/type.h	81;"	d
+IsHexDigit	ucl/lex.h	23;"	d
+IsIncompletePtr	ucl/type.h	84;"	d
+IsIntegType	ucl/type.h	74;"	d
+IsLetter	ucl/lex.h	24;"	d
+IsLetterOrDigit	ucl/lex.h	25;"	d
+IsNormalRecord	ucl/x86.c	21;"	d	file:
+IsNullConstant	ucl/exprchk.c	/^static int IsNullConstant(AstExpression expr)$/;"	f	file:
+IsObjectPtr	ucl/type.h	83;"	d
+IsOctDigit	ucl/lex.h	22;"	d
+IsPtrType	ucl/type.h	79;"	d
+IsRealType	ucl/type.h	76;"	d
+IsRecordType	ucl/type.h	80;"	d
+IsScalarType	ucl/type.h	78;"	d
+IsTypeName	ucl/decl.c	/^int IsTypeName(int tok)$/;"	f
+IsTypedefName	ucl/decl.c	/^static int IsTypedefName(char *id)$/;"	f	file:
+IsUnsigned	ucl/type.h	75;"	d
+IsVoidPtr	ucl/type.h	85;"	d
+LDBL_DIG	ucl/linux/include/float.h	29;"	d
+LDBL_EPSILON	ucl/linux/include/float.h	28;"	d
+LDBL_MANT_DIG	ucl/linux/include/float.h	27;"	d
+LDBL_MAX	ucl/linux/include/float.h	34;"	d
+LDBL_MAX_10_EXP	ucl/linux/include/float.h	35;"	d
+LDBL_MAX_EXP	ucl/linux/include/float.h	33;"	d
+LDBL_MIN	ucl/linux/include/float.h	31;"	d
+LDBL_MIN_10_EXP	ucl/linux/include/float.h	32;"	d
+LDBL_MIN_EXP	ucl/linux/include/float.h	30;"	d
+LDProg	driver/linux.c	/^static char *LDProg[] = $/;"	v	file:
+LDProg	driver/win32.c	/^static char *LDProg[] = $/;"	v	file:
+LEN	ucl/vector.h	11;"	d
+LIB_FILE	driver/ucc.h	/^enum { C_FILE, PP_FILE, ASM_FILE, OBJ_FILE, LIB_FILE, EXE_FILE };$/;"	e	enum:__anon11
+LINE	ucl/lex.c	6;"	d	file:
+LINEHEAD	ucl/lex.c	7;"	d	file:
+LITTLE_ENDIAN	ucl/config.h	4;"	d
+LITTLE_ENDIAN	ucl/config.h	5;"	d
+LONG	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+LONGDOUBLE	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+LONGLONG	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+LONG_DOUBLE_SIZE	ucl/config.h	14;"	d
+LONG_LONG_SIZE	ucl/config.h	11;"	d
+LONG_MAX	ucl/linux/include/limits.h	15;"	d
+LONG_MIN	ucl/linux/include/limits.h	20;"	d
+LONG_SIZE	ucl/config.h	10;"	d
+Label	ucl/ast.h	/^} *Label;$/;"	t	typeref:struct:label
+LabelNum	ucl/symbol.c	/^int LabelNum;$/;"	v
+LayoutFrame	ucl/x86.c	/^static int LayoutFrame(FunctionSymbol fsym, int fstParamPos)$/;"	f	file:
+LeftAlign	ucl/output.c	/^void LeftAlign(FILE *file, int pos)$/;"	f
+Level	ucl/symbol.c	/^int Level;$/;"	v
+List	driver/ucc.h	/^} *List;$/;"	t	typeref:struct:list
+ListAppend	driver/ucc.c	/^List ListAppend(List list, char *str)$/;"	f
+ListCombine	driver/ucc.c	/^List ListCombine(List to, List from)$/;"	f
+LookupField	ucl/type.c	/^Field LookupField(Type ty, char *id)$/;"	f
+LookupID	ucl/symbol.c	/^Symbol LookupID(char *name)$/;"	f
+LookupSymbol	ucl/symbol.c	/^static Symbol LookupSymbol(Table tbl, char *name)$/;"	f	file:
+LookupTag	ucl/symbol.c	/^Symbol LookupTag(char *name)$/;"	f
+MBLOCK_SIZE	ucl/alloc.h	26;"	d
+MB_LEN_MAX	ucl/linux/include/limits.h	5;"	d
+MergeInstructions	ucl/flow.c	/^static void MergeInstructions(BBlock bb1, BBlock bb2)$/;"	f	file:
+MergeSwitchBucket	ucl/transtmt.c	/^static int MergeSwitchBucket(SwitchBucket *pBucket)$/;"	f	file:
+ModifySuccessor	ucl/flow.c	/^static void ModifySuccessor(BBlock bb, BBlock s, BBlock ns)$/;"	f	file:
+ModifyVar	ucl/x86.c	/^static void ModifyVar(Symbol p)$/;"	f	file:
+Move	ucl/x86.c	/^static void Move(int code, Symbol dst, Symbol src)$/;"	f	file:
+NAME_HASH_MASK	ucl/str.h	17;"	d
+NEXT_TOKEN	ucl/ast.h	61;"	d
+NK_ArrayDeclarator	ucl/ast.h	/^	NK_StructDeclarator,    NK_PointerDeclarator,  NK_ArrayDeclarator,		$/;"	e	enum:nodeKind
+NK_BreakStatement	ucl/ast.h	/^	NK_GotoStatement,       NK_BreakStatement,     NK_ContinueStatement,		$/;"	e	enum:nodeKind
+NK_CaseStatement	ucl/ast.h	/^	NK_ExpressionStatement, NK_LabelStatement,     NK_CaseStatement,		$/;"	e	enum:nodeKind
+NK_CompoundStatement	ucl/ast.h	/^	NK_ReturnStatement,     NK_CompoundStatement$/;"	e	enum:nodeKind
+NK_ContinueStatement	ucl/ast.h	/^	NK_GotoStatement,       NK_BreakStatement,     NK_ContinueStatement,		$/;"	e	enum:nodeKind
+NK_Declaration	ucl/ast.h	/^	NK_TranslationUnit,     NK_Function,           NK_Declaration,$/;"	e	enum:nodeKind
+NK_DefaultStatement	ucl/ast.h	/^	NK_DefaultStatement,    NK_IfStatement,        NK_SwitchStatement,		$/;"	e	enum:nodeKind
+NK_DoStatement	ucl/ast.h	/^	NK_WhileStatement,      NK_DoStatement,        NK_ForStatement,		$/;"	e	enum:nodeKind
+NK_EnumSpecifier	ucl/ast.h	/^	NK_TypedefName,         NK_EnumSpecifier,      NK_Enumerator,			$/;"	e	enum:nodeKind
+NK_Enumerator	ucl/ast.h	/^	NK_TypedefName,         NK_EnumSpecifier,      NK_Enumerator,			$/;"	e	enum:nodeKind
+NK_Expression	ucl/ast.h	/^	NK_Expression,$/;"	e	enum:nodeKind
+NK_ExpressionStatement	ucl/ast.h	/^	NK_ExpressionStatement, NK_LabelStatement,     NK_CaseStatement,		$/;"	e	enum:nodeKind
+NK_ForStatement	ucl/ast.h	/^	NK_WhileStatement,      NK_DoStatement,        NK_ForStatement,		$/;"	e	enum:nodeKind
+NK_Function	ucl/ast.h	/^	NK_TranslationUnit,     NK_Function,           NK_Declaration,$/;"	e	enum:nodeKind
+NK_FunctionDeclarator	ucl/ast.h	/^	NK_FunctionDeclarator,  NK_ParameterTypeList,  NK_ParameterDeclaration,$/;"	e	enum:nodeKind
+NK_GotoStatement	ucl/ast.h	/^	NK_GotoStatement,       NK_BreakStatement,     NK_ContinueStatement,		$/;"	e	enum:nodeKind
+NK_IfStatement	ucl/ast.h	/^	NK_DefaultStatement,    NK_IfStatement,        NK_SwitchStatement,		$/;"	e	enum:nodeKind
+NK_InitDeclarator	ucl/ast.h	/^	NK_NameDeclarator,      NK_InitDeclarator,     NK_Initializer,$/;"	e	enum:nodeKind
+NK_Initializer	ucl/ast.h	/^	NK_NameDeclarator,      NK_InitDeclarator,     NK_Initializer,$/;"	e	enum:nodeKind
+NK_LabelStatement	ucl/ast.h	/^	NK_ExpressionStatement, NK_LabelStatement,     NK_CaseStatement,		$/;"	e	enum:nodeKind
+NK_NameDeclarator	ucl/ast.h	/^	NK_NameDeclarator,      NK_InitDeclarator,     NK_Initializer,$/;"	e	enum:nodeKind
+NK_ParameterDeclaration	ucl/ast.h	/^	NK_FunctionDeclarator,  NK_ParameterTypeList,  NK_ParameterDeclaration,$/;"	e	enum:nodeKind
+NK_ParameterTypeList	ucl/ast.h	/^	NK_FunctionDeclarator,  NK_ParameterTypeList,  NK_ParameterDeclaration,$/;"	e	enum:nodeKind
+NK_PointerDeclarator	ucl/ast.h	/^	NK_StructDeclarator,    NK_PointerDeclarator,  NK_ArrayDeclarator,		$/;"	e	enum:nodeKind
+NK_ReturnStatement	ucl/ast.h	/^	NK_ReturnStatement,     NK_CompoundStatement$/;"	e	enum:nodeKind
+NK_Specifiers	ucl/ast.h	/^	NK_TypeName,            NK_Specifiers,         NK_Token,				$/;"	e	enum:nodeKind
+NK_StructDeclaration	ucl/ast.h	/^	NK_StructSpecifier,     NK_UnionSpecifier,     NK_StructDeclaration,	$/;"	e	enum:nodeKind
+NK_StructDeclarator	ucl/ast.h	/^	NK_StructDeclarator,    NK_PointerDeclarator,  NK_ArrayDeclarator,		$/;"	e	enum:nodeKind
+NK_StructSpecifier	ucl/ast.h	/^	NK_StructSpecifier,     NK_UnionSpecifier,     NK_StructDeclaration,	$/;"	e	enum:nodeKind
+NK_SwitchStatement	ucl/ast.h	/^	NK_DefaultStatement,    NK_IfStatement,        NK_SwitchStatement,		$/;"	e	enum:nodeKind
+NK_Token	ucl/ast.h	/^	NK_TypeName,            NK_Specifiers,         NK_Token,				$/;"	e	enum:nodeKind
+NK_TranslationUnit	ucl/ast.h	/^	NK_TranslationUnit,     NK_Function,           NK_Declaration,$/;"	e	enum:nodeKind
+NK_TypeName	ucl/ast.h	/^	NK_TypeName,            NK_Specifiers,         NK_Token,				$/;"	e	enum:nodeKind
+NK_TypedefName	ucl/ast.h	/^	NK_TypedefName,         NK_EnumSpecifier,      NK_Enumerator,			$/;"	e	enum:nodeKind
+NK_UnionSpecifier	ucl/ast.h	/^	NK_StructSpecifier,     NK_UnionSpecifier,     NK_StructDeclaration,	$/;"	e	enum:nodeKind
+NK_WhileStatement	ucl/ast.h	/^	NK_WhileStatement,      NK_DoStatement,        NK_ForStatement,		$/;"	e	enum:nodeKind
+NO_REG	ucl/reg.h	7;"	d
+NameBucket	ucl/str.h	/^} *NameBucket;$/;"	t	typeref:struct:nameBucket
+NameBuckets	ucl/str.c	/^static NameBucket NameBuckets[NAME_HASH_MASK + 1];$/;"	v	file:
+Not	ucl/tranexpr.c	/^AstExpression Not(AstExpression expr)$/;"	f
+NotFunctionPtr	ucl/type.h	86;"	d
+OBJFiles	driver/ucc.c	/^List OBJFiles;$/;"	v
+OBJS	ucl/Makefile	/^OBJS        = $(C_SRC:.c=.o)$/;"	m
+OBJ_FILE	driver/ucc.h	/^enum { C_FILE, PP_FILE, ASM_FILE, OBJ_FILE, LIB_FILE, EXE_FILE };$/;"	e	enum:__anon11
+OP	ucl/expr.h	/^enum OP$/;"	g
+OPCODE	ucl/gen.h	6;"	d
+OPCODE	ucl/gen.h	8;"	d
+OPCODE	ucl/uildasm.c	13;"	d	file:
+OPCODE	ucl/uildasm.c	15;"	d	file:
+OPCODE	ucl/x86.c	823;"	d	file:
+OPCODE	ucl/x86.c	825;"	d	file:
+OPCode	ucl/gen.h	/^enum OPCode$/;"	g
+OPCodeNames	ucl/uildasm.c	/^static char *OPCodeNames[] = $/;"	v	file:
+OPINFO	ucl/expr.c	24;"	d	file:
+OPINFO	ucl/expr.c	27;"	d	file:
+OPINFO	ucl/expr.c	36;"	d	file:
+OPINFO	ucl/expr.c	39;"	d	file:
+OPINFO	ucl/expr.h	6;"	d
+OPINFO	ucl/expr.h	8;"	d
+OPINFO	ucl/exprchk.c	811;"	d	file:
+OPINFO	ucl/exprchk.c	813;"	d	file:
+OPINFO	ucl/gen.c	11;"	d	file:
+OPINFO	ucl/gen.c	9;"	d	file:
+OPINFO	ucl/tranexpr.c	507;"	d	file:
+OPINFO	ucl/tranexpr.c	509;"	d	file:
+OPMap	ucl/gen.c	/^int OPMap[] = $/;"	v
+OPNames	ucl/expr.c	/^char *OPNames[] = $/;"	v
+ORG	ucl/x86linux.c	/^static int ORG;$/;"	v	file:
+ORG	ucl/x86win32.c	/^static int ORG;$/;"	v	file:
+Offset	ucl/tranexpr.c	/^static Symbol Offset(Type ty, Symbol addr, Symbol voff, int coff)$/;"	f	file:
+Optimize	ucl/simp.c	/^void Optimize(FunctionSymbol fsym)$/;"	f
+Option	driver/ucc.c	/^struct option Option;$/;"	v	typeref:struct:option
+OutBuffer	ucl/output.c	/^char OutBuffer[BUF_LEN];$/;"	v
+OverloadNames	ucl/decl.c	/^static Vector TypedefNames, OverloadNames;$/;"	v	file:
+PERFORM_ARITH_CONVERSION	ucl/exprchk.c	13;"	d	file:
+POINTER	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+POINTER_TO	ucl/decl.h	/^enum { POINTER_TO, ARRAY_OF, FUNCTION_RETURN };$/;"	e	enum:__anon3
+PPFiles	driver/ucc.c	/^List PPFiles;$/;"	v
+PP_FILE	driver/ucc.h	/^enum { C_FILE, PP_FILE, ASM_FILE, OBJ_FILE, LIB_FILE, EXE_FILE };$/;"	e	enum:__anon11
+PRESERVE_REGS	ucl/x86.c	22;"	d	file:
+PUT_CHAR	ucl/output.c	7;"	d	file:
+Parameter	ucl/type.h	/^} *Parameter;$/;"	t	typeref:struct:parameter
+ParseAssignmentExpression	ucl/expr.c	/^AstExpression ParseAssignmentExpression(void)$/;"	f
+ParseBinaryExpression	ucl/expr.c	/^static AstExpression ParseBinaryExpression(int prec)$/;"	f	file:
+ParseBreakStatement	ucl/stmt.c	/^static AstStatement ParseBreakStatement(void)$/;"	f	file:
+ParseCaseStatement	ucl/stmt.c	/^static AstStatement ParseCaseStatement(void)$/;"	f	file:
+ParseCmdLine	driver/ucc.c	/^static int ParseCmdLine(int argc, char *argv[])$/;"	f	file:
+ParseCommandLine	ucl/ucl.c	/^static int ParseCommandLine(int argc, char *argv[])$/;"	f	file:
+ParseCommonHeader	ucl/decl.c	/^static AstDeclaration ParseCommonHeader(void)$/;"	f	file:
+ParseCompoundStatement	ucl/stmt.c	/^AstStatement ParseCompoundStatement(void)$/;"	f
+ParseConditionalExpression	ucl/expr.c	/^static AstExpression ParseConditionalExpression(void)$/;"	f	file:
+ParseConstantExpression	ucl/expr.c	/^AstExpression ParseConstantExpression(void)$/;"	f
+ParseContinueStatement	ucl/stmt.c	/^static AstStatement ParseContinueStatement(void)$/;"	f	file:
+ParseDeclaration	ucl/decl.c	/^AstDeclaration ParseDeclaration(void)$/;"	f
+ParseDeclarationSpecifiers	ucl/decl.c	/^static AstSpecifiers ParseDeclarationSpecifiers(void)$/;"	f	file:
+ParseDeclarator	ucl/decl.c	/^static AstDeclarator ParseDeclarator(int kind)$/;"	f	file:
+ParseDefaultStatement	ucl/stmt.c	/^static AstStatement ParseDefaultStatement(void)$/;"	f	file:
+ParseDirectDeclarator	ucl/decl.c	/^static AstDeclarator ParseDirectDeclarator(int kind)$/;"	f	file:
+ParseDoStatement	ucl/stmt.c	/^static AstStatement ParseDoStatement()$/;"	f	file:
+ParseEnumSpecifier	ucl/decl.c	/^static AstEnumSpecifier ParseEnumSpecifier(void)$/;"	f	file:
+ParseEnumerator	ucl/decl.c	/^static AstEnumerator ParseEnumerator(void)$/;"	f	file:
+ParseExpression	ucl/expr.c	/^AstExpression ParseExpression(void)$/;"	f
+ParseExpressionStatement	ucl/stmt.c	/^static AstStatement ParseExpressionStatement(void)$/;"	f	file:
+ParseExternalDeclaration	ucl/decl.c	/^static AstNode ParseExternalDeclaration(void)$/;"	f	file:
+ParseForStatement	ucl/stmt.c	/^static AstStatement ParseForStatement()$/;"	f	file:
+ParseGotoStatement	ucl/stmt.c	/^static AstStatement ParseGotoStatement(void)$/;"	f	file:
+ParseIfStatement	ucl/stmt.c	/^static AstStatement ParseIfStatement(void)$/;"	f	file:
+ParseInitDeclarator	ucl/decl.c	/^static AstInitDeclarator ParseInitDeclarator(void)$/;"	f	file:
+ParseInitializer	ucl/decl.c	/^static AstInitializer ParseInitializer(void)$/;"	f	file:
+ParseLabelStatement	ucl/stmt.c	/^static AstStatement ParseLabelStatement(void)$/;"	f	file:
+ParseOption	driver/ucc.c	/^List ParseOption(char *opt)$/;"	f
+ParseParameterDeclaration	ucl/decl.c	/^static AstParameterDeclaration ParseParameterDeclaration(void)$/;"	f	file:
+ParseParameterTypeList	ucl/decl.c	/^AstParameterTypeList ParseParameterTypeList(void)$/;"	f
+ParsePostfixDeclarator	ucl/decl.c	/^static AstDeclarator ParsePostfixDeclarator(int kind)$/;"	f	file:
+ParsePostfixExpression	ucl/expr.c	/^static AstExpression ParsePostfixExpression(void)$/;"	f	file:
+ParsePrimaryExpression	ucl/expr.c	/^static AstExpression ParsePrimaryExpression(void)$/;"	f	file:
+ParseReturnStatement	ucl/stmt.c	/^static AstStatement ParseReturnStatement(void)$/;"	f	file:
+ParseStatement	ucl/stmt.c	/^static AstStatement ParseStatement(void)$/;"	f	file:
+ParseStructDeclaration	ucl/decl.c	/^static AstStructDeclaration ParseStructDeclaration(void)$/;"	f	file:
+ParseStructDeclarator	ucl/decl.c	/^static AstStructDeclarator ParseStructDeclarator(void)$/;"	f	file:
+ParseStructOrUnionSpecifier	ucl/decl.c	/^static AstStructSpecifier ParseStructOrUnionSpecifier(void)$/;"	f	file:
+ParseSwitchStatement	ucl/stmt.c	/^static AstStatement ParseSwitchStatement(void)$/;"	f	file:
+ParseTranslationUnit	ucl/decl.c	/^AstTranslationUnit ParseTranslationUnit(char *filename)$/;"	f
+ParseTypeName	ucl/decl.c	/^AstTypeName ParseTypeName(void)$/;"	f
+ParseUnaryExpression	ucl/expr.c	/^static AstExpression ParseUnaryExpression()$/;"	f	file:
+ParseWhileStatement	ucl/stmt.c	/^static AstStatement ParseWhileStatement(void)$/;"	f	file:
+PeekCoord	ucl/lex.c	/^static struct coord   PeekCoord;$/;"	v	typeref:struct:coord	file:
+PeekPoint	ucl/lex.c	/^static unsigned char *PeekPoint;$/;"	v	file:
+PeekValue	ucl/lex.c	/^static union value    PeekValue;$/;"	v	typeref:union:value	file:
+PeepHole	ucl/simp.c	/^static void PeepHole(BBlock bb)$/;"	f	file:
+PlaceBitField	ucl/declchk.c	/^static AstExpression PlaceBitField(Field fld, AstExpression expr)$/;"	f	file:
+PointerDifference	ucl/exprchk.c	/^static AstExpression PointerDifference(AstExpression diff, int size)$/;"	f	file:
+PointerTo	ucl/type.c	/^Type PointerTo(Type ty)$/;"	f
+PopStatement	ucl/stmtchk.c	8;"	d	file:
+PostCheckTypedef	ucl/decl.c	/^void PostCheckTypedef(void)$/;"	f
+Power2	ucl/simp.c	/^static int Power2(unsigned int u)$/;"	f	file:
+PreCheckTypedef	ucl/decl.c	/^static void PreCheckTypedef(AstDeclaration decl)$/;"	f	file:
+Prec	ucl/expr.c	/^static int Prec[] =$/;"	v	file:
+PrevCoord	ucl/lex.c	/^struct coord PrevCoord;$/;"	v	typeref:struct:coord
+Print	ucl/output.c	/^void Print(const char *fmt, ...)$/;"	f
+PrintCommand	driver/ucc.c	/^static void PrintCommand(void)$/;"	f	file:
+ProgramHeap	ucl/ucl.c	/^HEAP(ProgramHeap);$/;"	v
+Promote	ucl/type.c	/^Type Promote(Type ty)$/;"	f
+PromoteArgument	ucl/exprchk.c	/^static AstExpression PromoteArgument(AstExpression arg)$/;"	f	file:
+PushArgument	ucl/x86.c	/^static void PushArgument(Symbol p, Type ty)$/;"	f	file:
+PushStatement	ucl/stmtchk.c	7;"	d	file:
+PutASMCode	ucl/x86linux.c	/^void PutASMCode(int code, Symbol opds[])$/;"	f
+PutASMCode	ucl/x86win32.c	/^void PutASMCode(int code, Symbol opds[])$/;"	f
+PutChar	ucl/output.c	/^void PutChar(int ch)$/;"	f
+PutInReg	ucl/x86.c	/^static Symbol PutInReg(Symbol p)$/;"	f	file:
+PutString	ucl/output.c	/^void PutString(char *s)$/;"	f
+Qualify	ucl/type.c	/^Type Qualify(int qual, Type ty)$/;"	f
+REPORT_OP_ERROR	ucl/exprchk.c	19;"	d	file:
+ReadBitField	ucl/tranexpr.c	/^static Symbol ReadBitField(Field fld, Symbol p)$/;"	f	file:
+ReadSourceFile	ucl/input.c	/^void ReadSourceFile(char *filename)$/;"	f
+RecordType	ucl/type.h	/^} *RecordType;$/;"	t	typeref:struct:recordType
+RemoveEdge	ucl/flow.c	/^static void RemoveEdge(CFGEdge *pprev, BBlock bb)$/;"	f	file:
+RemoveFiles	driver/ucc.c	/^static void RemoveFiles(void)$/;"	f	file:
+RemovePredecessor	ucl/flow.c	/^static void RemovePredecessor(BBlock bb, BBlock p)$/;"	f	file:
+RemoveSuccessor	ucl/flow.c	/^static void RemoveSuccessor(BBlock bb, BBlock s)$/;"	f	file:
+SCHAR_MAX	ucl/linux/include/limits.h	12;"	d
+SCHAR_MIN	ucl/linux/include/limits.h	17;"	d
+SCRATCH_REGS	ucl/x86.c	23;"	d	file:
+SHORT	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+SHORT_SIZE	ucl/config.h	8;"	d
+SHRT_MAX	ucl/linux/include/limits.h	13;"	d
+SHRT_MIN	ucl/linux/include/limits.h	18;"	d
+SINGLE_CHAR_SCANNER	ucl/lex.c	870;"	d	file:
+SK_Constant	ucl/symbol.h	/^	SK_Tag,    SK_TypedefName, SK_EnumConstant, SK_Constant, SK_Variable, SK_Temp,$/;"	e	enum:__anon6
+SK_EnumConstant	ucl/symbol.h	/^	SK_Tag,    SK_TypedefName, SK_EnumConstant, SK_Constant, SK_Variable, SK_Temp,$/;"	e	enum:__anon6
+SK_Function	ucl/symbol.h	/^	SK_Offset, SK_String,      SK_Label,        SK_Function, SK_Register$/;"	e	enum:__anon6
+SK_IRegister	ucl/reg.h	6;"	d
+SK_Label	ucl/symbol.h	/^	SK_Offset, SK_String,      SK_Label,        SK_Function, SK_Register$/;"	e	enum:__anon6
+SK_Offset	ucl/symbol.h	/^	SK_Offset, SK_String,      SK_Label,        SK_Function, SK_Register$/;"	e	enum:__anon6
+SK_Register	ucl/symbol.h	/^	SK_Offset, SK_String,      SK_Label,        SK_Function, SK_Register$/;"	e	enum:__anon6
+SK_String	ucl/symbol.h	/^	SK_Offset, SK_String,      SK_Label,        SK_Function, SK_Register$/;"	e	enum:__anon6
+SK_Tag	ucl/symbol.h	/^	SK_Tag,    SK_TypedefName, SK_EnumConstant, SK_Constant, SK_Variable, SK_Temp,$/;"	e	enum:__anon6
+SK_Temp	ucl/symbol.h	/^	SK_Tag,    SK_TypedefName, SK_EnumConstant, SK_Constant, SK_Variable, SK_Temp,$/;"	e	enum:__anon6
+SK_TypedefName	ucl/symbol.h	/^	SK_Tag,    SK_TypedefName, SK_EnumConstant, SK_Constant, SK_Variable, SK_Temp,$/;"	e	enum:__anon6
+SK_Variable	ucl/symbol.h	/^	SK_Tag,    SK_TypedefName, SK_EnumConstant, SK_Constant, SK_Variable, SK_Temp,$/;"	e	enum:__anon6
+SRC1	ucl/uildasm.c	8;"	d	file:
+SRC1	ucl/x86.c	19;"	d	file:
+SRC2	ucl/uildasm.c	9;"	d	file:
+SRC2	ucl/x86.c	20;"	d	file:
+STACK_ALIGN_SIZE	ucl/x86.c	24;"	d	file:
+STRUCT	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+SWAP_KIDS	ucl/exprchk.c	6;"	d	file:
+SYMBOL_COMMON	ucl/symbol.h	12;"	d
+SYM_HASH_MASK	ucl/symbol.h	10;"	d
+SaveX87Top	ucl/x86.c	/^static void SaveX87Top(void)$/;"	f	file:
+ScalePointerOffset	ucl/exprchk.c	/^static AstExpression ScalePointerOffset(AstExpression offset, int scale)$/;"	f	file:
+ScanAmpersand	ucl/lex.c	/^static int ScanAmpersand(void)$/;"	f	file:
+ScanBadChar	ucl/lex.c	/^static int ScanBadChar(void)$/;"	f	file:
+ScanBar	ucl/lex.c	/^static int ScanBar(void)$/;"	f	file:
+ScanCaret	ucl/lex.c	/^static int ScanCaret(void)$/;"	f	file:
+ScanCharLiteral	ucl/lex.c	/^static int ScanCharLiteral(void)$/;"	f	file:
+ScanDot	ucl/lex.c	/^static int ScanDot(void)$/;"	f	file:
+ScanEOF	ucl/lex.c	/^static int ScanEOF(void)$/;"	f	file:
+ScanEqual	ucl/lex.c	/^static int ScanEqual(void)$/;"	f	file:
+ScanEscapeChar	ucl/lex.c	/^static int ScanEscapeChar(int wide)$/;"	f	file:
+ScanExclamation	ucl/lex.c	/^static int ScanExclamation(void)$/;"	f	file:
+ScanFloatLiteral	ucl/lex.c	/^static int ScanFloatLiteral(unsigned char *start)$/;"	f	file:
+ScanGreat	ucl/lex.c	/^static int ScanGreat(void)$/;"	f	file:
+ScanIdentifier	ucl/lex.c	/^static int ScanIdentifier(void)$/;"	f	file:
+ScanIntLiteral	ucl/lex.c	/^static int ScanIntLiteral(unsigned char *start, int len, int base)$/;"	f	file:
+ScanLess	ucl/lex.c	/^static int ScanLess(void)$/;"	f	file:
+ScanMinus	ucl/lex.c	/^static int ScanMinus(void)$/;"	f	file:
+ScanNumericLiteral	ucl/lex.c	/^static int ScanNumericLiteral(void)$/;"	f	file:
+ScanPPLine	ucl/lex.c	/^static void ScanPPLine(void)$/;"	f	file:
+ScanPercent	ucl/lex.c	/^static int ScanPercent(void)$/;"	f	file:
+ScanPlus	ucl/lex.c	/^static int ScanPlus(void)$/;"	f	file:
+ScanSlash	ucl/lex.c	/^static int ScanSlash(void)$/;"	f	file:
+ScanStar	ucl/lex.c	/^static int ScanStar(void)$/;"	f	file:
+ScanStringLiteral	ucl/lex.c	/^static int ScanStringLiteral(void)$/;"	f	file:
+Scanner	ucl/lex.c	/^typedef int (*Scanner)(void);$/;"	t	file:
+Scanners	ucl/lex.c	/^static Scanner        Scanners[256];$/;"	v	file:
+Segment	ucl/x86linux.c	/^void Segment(int seg)$/;"	f
+Segment	ucl/x86win32.c	/^void Segment(int seg)$/;"	f
+SelectSpillReg	ucl/reg.c	/^static int SelectSpillReg(int endr)$/;"	f	file:
+SetupLexer	ucl/lex.c	/^void SetupLexer(void)$/;"	f
+SetupRegisters	ucl/x86linux.c	/^void SetupRegisters(void)$/;"	f
+SetupRegisters	ucl/x86win32.c	/^void SetupRegisters(void)$/;"	f
+SetupToolChain	driver/linux.c	/^void SetupToolChain(void)$/;"	f
+SetupToolChain	driver/win32.c	/^void SetupToolChain(void)$/;"	f
+SetupTypeSystem	ucl/type.c	/^void SetupTypeSystem(void)$/;"	f
+ShowHelp	driver/ucc.c	/^static void ShowHelp(void)$/;"	f	file:
+Signature	ucl/type.h	/^} *Signature;$/;"	t	typeref:struct:signature
+Simplify	ucl/simp.c	/^Symbol Simplify(Type ty, int opcode, Symbol src1, Symbol src2)$/;"	f
+SkipTo	ucl/ast.c	/^void SkipTo(int toks[], char *einfo)$/;"	f
+SkipWhiteSpace	ucl/lex.c	/^static void SkipWhiteSpace(void)$/;"	f	file:
+Space	ucl/x86linux.c	/^void Space(int size)$/;"	f
+Space	ucl/x86win32.c	/^void Space(int size)$/;"	f
+SpillReg	ucl/reg.c	/^void SpillReg(Symbol reg)$/;"	f
+StartBBlock	ucl/gen.c	/^void StartBBlock(BBlock bb)$/;"	f
+StartRecord	ucl/type.c	/^Type StartRecord(char *id, int categ)$/;"	f
+StmtCheckers	ucl/stmtchk.c	/^static AstStatement (* StmtCheckers[])(AstStatement) = $/;"	v	file:
+StmtTrans	ucl/transtmt.c	/^static void (* StmtTrans[])(AstStatement) = $/;"	v	file:
+StoreVar	ucl/x86.c	/^void StoreVar(Symbol reg, Symbol v)$/;"	f
+String	ucl/str.h	/^} *String;$/;"	t	typeref:struct:string
+StringHeap	ucl/ucl.c	/^HEAP(StringHeap);$/;"	v
+StringNum	ucl/symbol.c	/^static int StringNum;$/;"	v	file:
+StringTail	ucl/symbol.c	/^static Symbol *FunctionTail, *GlobalTail, *StringTail, *FloatTail;$/;"	v	file:
+Strings	ucl/symbol.c	/^Symbol Strings;$/;"	v
+SwitchBucket	ucl/stmt.h	/^} *SwitchBucket;$/;"	t	typeref:struct:switchBucket
+SwitchTableNum	ucl/emit.c	/^int SwitchTableNum;$/;"	v
+Symbol	ucl/symbol.h	/^} *Symbol;$/;"	t	typeref:struct:symbol
+T	ucl/type.h	72;"	d
+TDName	ucl/decl.h	/^} *TDName;$/;"	t	typeref:struct:tdname
+TEMPLATE	ucl/x86.c	12;"	d	file:
+TEMPLATE	ucl/x86.c	14;"	d	file:
+TEMPLATE	ucl/x86linux.c	10;"	d	file:
+TEMPLATE	ucl/x86linux.c	12;"	d	file:
+TEMPLATE	ucl/x86win32.c	14;"	d	file:
+TEMPLATE	ucl/x86win32.c	16;"	d	file:
+TK_BEGIN	ucl/lex.h	/^	TK_BEGIN,$/;"	e	enum:token
+TOKEN	ucl/lex.c	21;"	d	file:
+TOKEN	ucl/lex.c	23;"	d	file:
+TOKEN	ucl/lex.h	7;"	d
+TOKEN	ucl/lex.h	9;"	d
+TOKENOP	ucl/expr.c	16;"	d	file:
+TOKENOP	ucl/expr.c	18;"	d	file:
+TOP_ITEM	ucl/vector.h	23;"	d
+TYPE_COMMON	ucl/type.h	14;"	d
+Table	ucl/symbol.h	/^} *Table;$/;"	t	typeref:struct:table
+Tags	ucl/symbol.c	/^static Table Tags;$/;"	v	file:
+TempNum	ucl/symbol.c	/^int TempNum;$/;"	v
+ToUpper	ucl/lex.h	26;"	d
+TokenCoord	ucl/lex.c	/^struct coord TokenCoord;$/;"	v	typeref:struct:coord
+TokenOps	ucl/expr.c	/^static struct tokenOp TokenOps[] = $/;"	v	typeref:struct:tokenOp	file:
+TokenStrings	ucl/lex.c	/^char* TokenStrings[] = $/;"	v
+TokenValue	ucl/lex.c	/^union value  TokenValue;$/;"	v	typeref:union:value
+TopStatement	ucl/stmtchk.c	9;"	d	file:
+TrackValueChange	ucl/gen.c	/^static void TrackValueChange(Symbol p)$/;"	f	file:
+TrackValueUse	ucl/gen.c	/^static void TrackValueUse(Symbol p, ValueDef def)$/;"	f	file:
+TransformIncrement	ucl/exprchk.c	/^static AstExpression TransformIncrement(AstExpression expr)$/;"	f	file:
+Translate	ucl/transtmt.c	/^void Translate(AstTranslationUnit transUnit)$/;"	f
+TranslateArrayIndex	ucl/tranexpr.c	/^static Symbol TranslateArrayIndex(AstExpression expr)$/;"	f	file:
+TranslateAssignmentExpression	ucl/tranexpr.c	/^static Symbol TranslateAssignmentExpression(AstExpression expr)$/;"	f	file:
+TranslateBinaryExpression	ucl/tranexpr.c	/^static Symbol TranslateBinaryExpression(AstExpression expr)$/;"	f	file:
+TranslateBranch	ucl/tranexpr.c	/^void TranslateBranch(AstExpression expr, BBlock trueBB, BBlock falseBB)$/;"	f
+TranslateBranchExpression	ucl/tranexpr.c	/^static Symbol TranslateBranchExpression(AstExpression expr)$/;"	f	file:
+TranslateBreakStatement	ucl/transtmt.c	/^static void TranslateBreakStatement(AstStatement stmt)$/;"	f	file:
+TranslateCaseStatement	ucl/transtmt.c	/^static void TranslateCaseStatement(AstStatement stmt)$/;"	f	file:
+TranslateCast	ucl/tranexpr.c	/^static Symbol TranslateCast(Type ty, Type sty, Symbol src)$/;"	f	file:
+TranslateCommaExpression	ucl/tranexpr.c	/^static Symbol TranslateCommaExpression(AstExpression expr)$/;"	f	file:
+TranslateCompoundStatement	ucl/transtmt.c	/^static void TranslateCompoundStatement(AstStatement stmt)$/;"	f	file:
+TranslateConditionalExpression	ucl/tranexpr.c	/^static Symbol TranslateConditionalExpression(AstExpression expr)$/;"	f	file:
+TranslateContinueStatement	ucl/transtmt.c	/^static void TranslateContinueStatement(AstStatement stmt)$/;"	f	file:
+TranslateDefaultStatement	ucl/transtmt.c	/^static void TranslateDefaultStatement(AstStatement stmt)$/;"	f	file:
+TranslateDoStatement	ucl/transtmt.c	/^static void TranslateDoStatement(AstStatement stmt)$/;"	f	file:
+TranslateErrorExpression	ucl/tranexpr.c	/^static Symbol TranslateErrorExpression(AstExpression expr)$/;"	f	file:
+TranslateExpression	ucl/tranexpr.c	/^Symbol TranslateExpression(AstExpression expr)$/;"	f
+TranslateExpressionStatement	ucl/transtmt.c	/^static void TranslateExpressionStatement(AstStatement stmt)$/;"	f	file:
+TranslateForStatement	ucl/transtmt.c	/^static void TranslateForStatement(AstStatement stmt)$/;"	f	file:
+TranslateFunction	ucl/transtmt.c	/^static void TranslateFunction(AstFunction func)$/;"	f	file:
+TranslateFunctionCall	ucl/tranexpr.c	/^static Symbol TranslateFunctionCall(AstExpression expr)$/;"	f	file:
+TranslateGotoStatement	ucl/transtmt.c	/^static void TranslateGotoStatement(AstStatement stmt)$/;"	f	file:
+TranslateIfStatement	ucl/transtmt.c	/^static void TranslateIfStatement(AstStatement stmt)$/;"	f	file:
+TranslateIncrement	ucl/tranexpr.c	/^static Symbol TranslateIncrement(AstExpression expr)$/;"	f	file:
+TranslateLabelStatement	ucl/transtmt.c	/^static void TranslateLabelStatement(AstStatement stmt)$/;"	f	file:
+TranslateMemberAccess	ucl/tranexpr.c	/^static Symbol TranslateMemberAccess(AstExpression expr)$/;"	f	file:
+TranslatePostfixExpression	ucl/tranexpr.c	/^static Symbol TranslatePostfixExpression(AstExpression expr)$/;"	f	file:
+TranslatePrimaryExpression	ucl/tranexpr.c	/^static Symbol TranslatePrimaryExpression(AstExpression expr)$/;"	f	file:
+TranslateReturnStatement	ucl/transtmt.c	/^static void TranslateReturnStatement(AstStatement stmt)$/;"	f	file:
+TranslateStatement	ucl/transtmt.c	/^static void TranslateStatement(AstStatement stmt)$/;"	f	file:
+TranslateSwitchBuckets	ucl/transtmt.c	/^static void TranslateSwitchBuckets(SwitchBucket *bucketArray, int left, int right, $/;"	f	file:
+TranslateSwitchStatement	ucl/transtmt.c	/^static void TranslateSwitchStatement(AstStatement stmt)$/;"	f	file:
+TranslateUnaryExpression	ucl/tranexpr.c	/^static Symbol TranslateUnaryExpression(AstExpression expr)$/;"	f	file:
+TranslateWhileStatement	ucl/transtmt.c	/^static void TranslateWhileStatement(AstStatement stmt)$/;"	f	file:
+TryAddLabel	ucl/stmtchk.c	/^static Label TryAddLabel(char *id)$/;"	f	file:
+TryAddPredecessor	ucl/flow.c	/^static void TryAddPredecessor(BBlock bb, BBlock p)$/;"	f	file:
+TryAddSuccessor	ucl/flow.c	/^static void TryAddSuccessor(BBlock bb, BBlock s)$/;"	f	file:
+TryAddValue	ucl/gen.c	/^Symbol TryAddValue(Type ty, int op, Symbol src1, Symbol src2)$/;"	f
+TryMergeBBlock	ucl/flow.c	/^BBlock TryMergeBBlock(BBlock bb1, BBlock bb2)$/;"	f
+Type	ucl/type.h	/^} *Type;$/;"	t	typeref:struct:type
+TypeCode	ucl/type.c	/^int TypeCode(Type ty)$/;"	f
+TypeDerivList	ucl/decl.h	/^} *TypeDerivList;$/;"	t	typeref:struct:typeDerivList
+TypeToString	ucl/type.c	/^char* TypeToString(Type ty)$/;"	f
+TypedefNames	ucl/decl.c	/^static Vector TypedefNames, OverloadNames;$/;"	v	file:
+Types	ucl/type.c	/^struct type Types[VOID - CHAR + 1];$/;"	v	typeref:struct:type
+U1	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+U2	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+U4	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+UCC	ucl/Makefile	/^UCC         = ..\/driver\/ucc$/;"	m
+UCCDIR	Makefile	/^UCCDIR = \/usr\/local\/lib\/ucc$/;"	m
+UCCDIR	driver/linux.c	7;"	d	file:
+UCHAR	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+UCHAR_MAX	ucl/linux/include/limits.h	7;"	d
+UINT	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+UINT_MAX	ucl/linux/include/limits.h	9;"	d
+ULONG	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+ULONGLONG	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+ULONG_MAX	ucl/linux/include/limits.h	10;"	d
+UNARY_OP	ucl/expr.h	34;"	d
+UNION	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+USHORT	ucl/type.h	/^	CHAR, UCHAR, SHORT, USHORT, INT, UINT, LONG, ULONG, LONGLONG, ULONGLONG, ENUM,$/;"	e	enum:__anon8
+USHRT_MAX	ucl/linux/include/limits.h	8;"	d
+Unqual	ucl/type.c	/^Type Unqual(Type ty)$/;"	f
+UsedRegs	ucl/reg.c	/^int UsedRegs;$/;"	v
+V	ucl/type.h	/^enum {I1, U1, I2, U2, I4, U4, F4, F8, V, B};$/;"	e	enum:__anon10
+VOID	ucl/type.h	/^	FLOAT, DOUBLE, LONGDOUBLE, POINTER, VOID, UNION, STRUCT, ARRAY, FUNCTION$/;"	e	enum:__anon8
+VOLATILE	ucl/type.h	/^enum { CONST = 0x1, VOLATILE = 0x2 };$/;"	e	enum:__anon9
+ValueDef	ucl/symbol.h	/^} *ValueDef;$/;"	t	typeref:struct:valueDef
+ValueUse	ucl/symbol.h	/^} *ValueUse;$/;"	t	typeref:struct:valueUse
+VariableSymbol	ucl/symbol.h	/^} *VariableSymbol;$/;"	t	typeref:struct:variableSymbol
+Vector	ucl/vector.h	/^} *Vector;$/;"	t	typeref:struct:vector
+WCHAR	ucl/config.h	17;"	d
+WCHAR	ucl/config.h	19;"	d
+WCharType	ucl/type.c	/^Type WCharType;$/;"	v
+Warning	ucl/error.c	/^void Warning(Coord coord, const char *format, ...)$/;"	f
+WarningCount	ucl/ucl.c	/^int WarningCount;$/;"	v
+WriteBitField	ucl/tranexpr.c	/^static Symbol WriteBitField(Field fld, Symbol dst, Symbol src)$/;"	f	file:
+X86ByteRegs	ucl/reg.c	/^Symbol X86ByteRegs[EDI + 1];$/;"	v
+X86Regs	ucl/reg.c	/^Symbol X86Regs[EDI + 1];$/;"	v
+X86WordRegs	ucl/reg.c	/^Symbol X86WordRegs[EDI + 1];$/;"	v
+X87TCode	ucl/x86.c	/^static int X87TCode;$/;"	v	file:
+X87Top	ucl/x86.c	/^static Symbol X87Top;$/;"	v	file:
+_P_WAIT	driver/linux.c	6;"	d	file:
+_VA_LIST	ucl/linux/include/stdarg.h	8;"	d
+_VA_LIST_DEFINED	ucl/linux/include/stdarg.h	9;"	d
+__ALLOC_H_	ucl/alloc.h	2;"	d
+__ASSERT_H_	ucl/linux/include/assert.h	2;"	d
+__AST_H_	ucl/ast.h	2;"	d
+__CONFIG_H_	ucl/config.h	2;"	d
+__DECL_H_	ucl/decl.h	2;"	d
+__ERROR_H_	ucl/error.h	2;"	d
+__EXPR_H_	ucl/expr.h	2;"	d
+__FLOAT_H_	ucl/linux/include/float.h	2;"	d
+__GEN_H_	ucl/gen.h	2;"	d
+__GRAMMER_H_	ucl/grammer.h	2;"	d
+__INPUT_H_	ucl/input.h	2;"	d
+__LEX_H_	ucl/lex.h	2;"	d
+__LIMITS_H_	ucl/linux/include/limits.h	2;"	d
+__MATH_H_	ucl/linux/include/math.h	2;"	d
+__OUTPUT_H_	ucl/output.h	2;"	d
+__REG_H_	ucl/reg.h	2;"	d
+__STDARG_H_	ucl/linux/include/stdarg.h	2;"	d
+__STMT_H_	ucl/stmt.h	2;"	d
+__STR_H_	ucl/str.h	2;"	d
+__SYMBOL_H_	ucl/symbol.h	2;"	d
+__TARGET_H_	ucl/target.h	2;"	d
+__TYPE_H_	ucl/type.h	2;"	d
+__UCC_H_	driver/ucc.h	2;"	d
+__UCC_H_	ucl/ucl.h	2;"	d
+__VECTOR_H_	ucl/vector.h	2;"	d
+__gnuc_va_list	ucl/linux/include/stdarg.h	/^typedef void *__gnuc_va_list;$/;"	t
+__va_arg_tmp	ucl/linux/include/stdarg.h	/^static float __va_arg_tmp;$/;"	v
+__va_list	ucl/linux/include/stdarg.h	/^typedef char *__va_list;$/;"	t
+_assert	ucl/assert.c	/^int _assert(char *e, char *file, int line) $/;"	f
+afiles	driver/ucc.h	/^	List afiles;$/;"	m	struct:option
+aflags	driver/ucc.h	/^	List aflags;$/;"	m	struct:option
+align	ucl/alloc.h	/^union align $/;"	u
+assert	ucl/linux/include/assert.h	12;"	d
+assert	ucl/linux/include/assert.h	17;"	d
+assert	ucl/linux/include/assert.h	8;"	d
+astArrayDeclarator	ucl/decl.h	/^typedef struct astArrayDeclarator$/;"	s
+astBreakStatement	ucl/stmt.h	/^typedef struct astBreakStatement$/;"	s
+astCaseStatement	ucl/stmt.h	/^typedef struct astCaseStatement$/;"	s
+astCompoundStatement	ucl/stmt.h	/^typedef struct astCompoundStatement$/;"	s
+astContinueStatement	ucl/stmt.h	/^typedef struct astContinueStatement$/;"	s
+astDeclaration	ucl/decl.h	/^struct astDeclaration$/;"	s
+astDeclarator	ucl/decl.h	/^typedef struct astDeclarator$/;"	s
+astDefaultStatement	ucl/stmt.h	/^typedef struct astDefaultStatement$/;"	s
+astEnumSpecifier	ucl/decl.h	/^typedef struct astEnumSpecifier$/;"	s
+astEnumerator	ucl/decl.h	/^typedef struct astEnumerator$/;"	s
+astExpression	ucl/expr.h	/^struct astExpression$/;"	s
+astExpressionStatement	ucl/stmt.h	/^typedef struct astExpressionStatement$/;"	s
+astForStatement	ucl/stmt.h	/^typedef struct astForStatement$/;"	s
+astFunction	ucl/decl.h	/^typedef struct astFunction$/;"	s
+astFunctionDeclarator	ucl/decl.h	/^typedef struct astFunctionDeclarator$/;"	s
+astGotoStatement	ucl/stmt.h	/^typedef struct astGotoStatement$/;"	s
+astIfStatement	ucl/stmt.h	/^typedef struct astIfStatement$/;"	s
+astInitDeclarator	ucl/decl.h	/^typedef struct astInitDeclarator$/;"	s
+astInitializer	ucl/decl.h	/^typedef struct astInitializer$/;"	s
+astLabelStatement	ucl/stmt.h	/^typedef struct astLabelStatement$/;"	s
+astLoopStatement	ucl/stmt.h	/^typedef struct astLoopStatement$/;"	s
+astNode	ucl/ast.h	/^typedef struct astNode$/;"	s
+astParameterDeclaration	ucl/decl.h	/^typedef struct astParameterDeclaration$/;"	s
+astParameterTypeList	ucl/decl.h	/^typedef struct astParameterTypeList$/;"	s
+astPointerDeclarator	ucl/decl.h	/^typedef struct astPointerDeclarator$/;"	s
+astReturnStatement	ucl/stmt.h	/^typedef struct astReturnStatement$/;"	s
+astSpecifiers	ucl/decl.h	/^struct astSpecifiers$/;"	s
+astStatement	ucl/stmt.h	/^struct astStatement$/;"	s
+astStructDeclaration	ucl/decl.h	/^typedef struct astStructDeclaration$/;"	s
+astStructDeclarator	ucl/decl.h	/^typedef struct astStructDeclarator$/;"	s
+astStructSpecifier	ucl/decl.h	/^typedef struct astStructSpecifier$/;"	s
+astSwitchStatement	ucl/stmt.h	/^typedef struct astSwitchStatement$/;"	s
+astToken	ucl/decl.h	/^typedef struct astToken$/;"	s
+astTranslationUnit	ucl/decl.h	/^struct astTranslationUnit$/;"	s
+astTypeName	ucl/decl.h	/^struct astTypeName$/;"	s
+astTypedefName	ucl/decl.h	/^typedef struct astTypedefName$/;"	s
+avail	ucl/alloc.h	/^	char *avail;$/;"	m	struct:mblock
+base	ucl/input.h	/^	unsigned char *base;$/;"	m	struct:input
+bb	ucl/gen.h	/^	BBlock bb;$/;"	m	struct:cfgedge
+bblock	ucl/gen.h	/^struct bblock$/;"	s
+begin	ucl/alloc.h	/^	char *begin;$/;"	m	struct:mblock
+bitfld	ucl/expr.h	/^	int bitfld  : 1;$/;"	m	struct:astExpression
+bits	ucl/type.h	/^	int bits;$/;"	m	struct:field
+bop	ucl/expr.h	/^	int bop  : 16;$/;"	m	struct:tokenOp
+breakable	ucl/decl.h	/^	Vector breakable;$/;"	m	struct:astFunction
+buckets	ucl/stmt.h	/^	SwitchBucket buckets;$/;"	m	struct:astSwitchStatement
+buckets	ucl/symbol.h	/^	Symbol *buckets;$/;"	m	struct:table
+cases	ucl/stmt.h	/^	AstCaseStatement cases;$/;"	m	struct:astSwitchStatement
+cases	ucl/stmt.h	/^	AstCaseStatement cases;$/;"	m	struct:switchBucket
+cfgedge	ucl/gen.h	/^typedef struct cfgedge$/;"	s
+cfiles	driver/ucc.h	/^	List cfiles;$/;"	m	struct:option
+cflags	driver/ucc.h	/^	List cflags;$/;"	m	struct:option
+chs	ucl/str.h	/^	char *chs;$/;"	m	struct:string
+col	ucl/input.h	/^	int col;$/;"	m	struct:coord
+coord	ucl/ast.h	/^	struct coord coord;$/;"	m	struct:label	typeref:struct:label::coord
+coord	ucl/input.h	/^typedef struct coord$/;"	s
+ctor	ucl/decl.h	/^	int ctor;$/;"	m	struct:typeDerivList
+cursor	ucl/input.h	/^	unsigned char *cursor;$/;"	m	struct:input
+d	ucl/alloc.h	/^	double d;$/;"	m	union:align
+d	ucl/lex.h	/^	double d;$/;"	m	union:value
+data	ucl/vector.h	/^	void **data;$/;"	m	struct:vector
+dec	ucl/decl.h	/^	AstDeclarator dec;$/;"	m	struct:astFunction
+dec	ucl/decl.h	/^	AstDeclarator dec;$/;"	m	struct:astInitDeclarator
+dec	ucl/decl.h	/^	AstDeclarator dec;$/;"	m	struct:astParameterDeclaration
+dec	ucl/decl.h	/^	AstDeclarator dec;$/;"	m	struct:astStructDeclarator
+dec	ucl/decl.h	/^	AstDeclarator dec;$/;"	m	struct:astTypeName
+decls	ucl/decl.h	/^	AstNode decls;$/;"	m	struct:astFunction
+decls	ucl/stmt.h	/^	AstNode decls;$/;"	m	struct:astCompoundStatement
+def	ucl/symbol.h	/^	ValueDef def;$/;"	m	struct:valueUse
+def	ucl/symbol.h	/^	ValueDef def;$/;"	m	struct:variableSymbol
+defBB	ucl/stmt.h	/^	BBlock defBB;$/;"	m	struct:astSwitchStatement
+defStmt	ucl/stmt.h	/^	AstDefaultStatement defStmt;$/;"	m	struct:astSwitchStatement
+defined	ucl/ast.h	/^	int defined;$/;"	m	struct:label
+dst	ucl/symbol.h	/^	Symbol dst;$/;"	m	struct:valueDef
+ellipse	ucl/decl.h	/^	int ellipse;$/;"	m	struct:astParameterTypeList
+elseStmt	ucl/stmt.h	/^	AstStatement  elseStmt;$/;"	m	struct:astIfStatement
+end	ucl/alloc.h	/^	char *end;$/;"	m	struct:mblock
+entryBB	ucl/symbol.h	/^	BBlock entryBB;$/;"	m	struct:functionSymbol
+enumType	ucl/type.h	/^typedef struct enumType$/;"	s
+enumers	ucl/decl.h	/^	AstNode enumers;$/;"	m	struct:astEnumSpecifier
+exitBB	ucl/symbol.h	/^	BBlock exitBB;$/;"	m	struct:functionSymbol
+expr	ucl/ast.h	/^	AstExpression expr;$/;"	m	struct:initData
+expr	ucl/decl.h	/^		AstExpression expr;$/;"	m	union:astInitializer::__anon5
+expr	ucl/decl.h	/^	AstExpression expr;$/;"	m	struct:astArrayDeclarator
+expr	ucl/decl.h	/^	AstExpression expr;$/;"	m	struct:astEnumerator
+expr	ucl/decl.h	/^	AstExpression expr;$/;"	m	struct:astStructDeclarator
+expr	ucl/stmt.h	/^	AstExpression expr;$/;"	m	struct:astCaseStatement
+expr	ucl/stmt.h	/^	AstExpression expr;$/;"	m	struct:astExpressionStatement
+expr	ucl/stmt.h	/^	AstExpression expr;$/;"	m	struct:astIfStatement
+expr	ucl/stmt.h	/^	AstExpression expr;$/;"	m	struct:astReturnStatement
+expr	ucl/stmt.h	/^	AstExpression expr;$/;"	m	struct:astSwitchStatement
+extDecls	ucl/decl.h	/^	AstNode extDecls;$/;"	m	struct:astTranslationUnit
+f	ucl/alloc.h	/^	int (*f)(void);$/;"	m	union:align
+f	ucl/lex.h	/^	float f;$/;"	m	union:value
+fdec	ucl/decl.h	/^	AstFunctionDeclarator fdec;$/;"	m	struct:astFunction
+field	ucl/type.h	/^typedef struct field$/;"	s
+file	ucl/input.h	/^	void* file;$/;"	m	struct:input
+fileMapping	ucl/input.h	/^	void* fileMapping;$/;"	m	struct:input
+filename	ucl/input.h	/^	char *filename;$/;"	m	struct:coord
+filename	ucl/input.h	/^	char *filename;$/;"	m	struct:input
+flds	ucl/type.h	/^	Field flds; $/;"	m	struct:recordType
+fsym	ucl/decl.h	/^	FunctionSymbol fsym;$/;"	m	struct:astFunction
+functionSymbol	ucl/symbol.h	/^typedef struct functionSymbol$/;"	s
+functionType	ucl/type.h	/^typedef struct functionType$/;"	s
+hasConstFld	ucl/type.h	/^	int hasConstFld : 16;$/;"	m	struct:recordType
+hasEllipse	ucl/type.h	/^	int hasEllipse : 16;  $/;"	m	struct:signature
+hasFlexArray	ucl/type.h	/^	int hasFlexArray : 16;$/;"	m	struct:recordType
+hasProto	ucl/type.h	/^	int hasProto   : 16; $/;"	m	struct:signature
+hasReturn	ucl/decl.h	/^	int hasReturn;$/;"	m	struct:astFunction
+head	ucl/alloc.h	/^	struct mblock head;$/;"	m	struct:heap	typeref:struct:heap::mblock
+heap	ucl/alloc.h	/^typedef struct heap$/;"	s
+i	ucl/lex.h	/^	int i[2];$/;"	m	union:value
+id	ucl/ast.h	/^	char *id;$/;"	m	struct:label
+id	ucl/decl.h	/^	char *id;$/;"	m	struct:astEnumSpecifier
+id	ucl/decl.h	/^	char *id;$/;"	m	struct:astEnumerator
+id	ucl/decl.h	/^	char *id;$/;"	m	struct:astStructSpecifier
+id	ucl/decl.h	/^	char *id;$/;"	m	struct:astTypedefName
+id	ucl/decl.h	/^	char *id;$/;"	m	struct:tdname
+id	ucl/stmt.h	/^	char *id;$/;"	m	struct:astGotoStatement
+id	ucl/stmt.h	/^	char *id;$/;"	m	struct:astLabelStatement
+id	ucl/type.h	/^	char *id; $/;"	m	struct:enumType
+id	ucl/type.h	/^	char *id; $/;"	m	struct:parameter
+id	ucl/type.h	/^	char *id; $/;"	m	struct:recordType
+id	ucl/type.h	/^	char *id;$/;"	m	struct:field
+idata	ucl/decl.h	/^	InitData idata;$/;"	m	struct:astInitializer
+idata	ucl/symbol.h	/^	InitData idata;$/;"	m	struct:variableSymbol
+ids	ucl/decl.h	/^	Vector ids;$/;"	m	struct:astFunctionDeclarator
+ilarg	ucl/gen.h	/^typedef struct ilarg$/;"	s
+ilocals	ucl/stmt.h	/^	Vector ilocals;$/;"	m	struct:astCompoundStatement
+incrExpr	ucl/stmt.h	/^	AstExpression incrExpr;$/;"	m	struct:astForStatement
+init	ucl/decl.h	/^	AstInitializer init;$/;"	m	struct:astInitDeclarator
+initData	ucl/ast.h	/^struct initData$/;"	s
+initDecs	ucl/decl.h	/^	AstNode initDecs;$/;"	m	struct:astDeclaration
+initExpr	ucl/stmt.h	/^	AstExpression initExpr;$/;"	m	struct:astForStatement
+initials	ucl/decl.h	/^		AstNode initials;$/;"	m	union:astInitializer::__anon5
+input	ucl/input.h	/^struct input$/;"	s
+inreg	ucl/expr.h	/^	int inreg   : 1;$/;"	m	struct:astExpression
+insth	ucl/gen.h	/^	struct irinst insth;$/;"	m	struct:bblock	typeref:struct:bblock::irinst
+irinst	ucl/gen.h	/^typedef struct irinst$/;"	s
+isarray	ucl/expr.h	/^	int isarray : 1;$/;"	m	struct:astExpression
+isfunc	ucl/expr.h	/^	int isfunc  : 1;$/;"	m	struct:astExpression
+keyword	ucl/keyword.h	/^struct keyword$/;"	s
+keywords	ucl/keyword.h	/^static struct keyword *keywords[] =$/;"	v	typeref:struct:keyword
+keywordsA	ucl/keyword.h	/^static struct keyword keywordsA[] =$/;"	v	typeref:struct:keyword
+keywordsB	ucl/keyword.h	/^static struct keyword keywordsB[] = $/;"	v	typeref:struct:keyword
+keywordsC	ucl/keyword.h	/^static struct keyword keywordsC[] = $/;"	v	typeref:struct:keyword
+keywordsD	ucl/keyword.h	/^static struct keyword keywordsD[] =$/;"	v	typeref:struct:keyword
+keywordsE	ucl/keyword.h	/^static struct keyword keywordsE[] =$/;"	v	typeref:struct:keyword
+keywordsF	ucl/keyword.h	/^static struct keyword keywordsF[] =$/;"	v	typeref:struct:keyword
+keywordsG	ucl/keyword.h	/^static struct keyword keywordsG[] = $/;"	v	typeref:struct:keyword
+keywordsH	ucl/keyword.h	/^static struct keyword keywordsH[] =$/;"	v	typeref:struct:keyword
+keywordsI	ucl/keyword.h	/^static struct keyword keywordsI[] = $/;"	v	typeref:struct:keyword
+keywordsJ	ucl/keyword.h	/^static struct keyword keywordsJ[] = $/;"	v	typeref:struct:keyword
+keywordsK	ucl/keyword.h	/^static struct keyword keywordsK[] = $/;"	v	typeref:struct:keyword
+keywordsL	ucl/keyword.h	/^static struct keyword keywordsL[] = $/;"	v	typeref:struct:keyword
+keywordsM	ucl/keyword.h	/^static struct keyword keywordsM[] = $/;"	v	typeref:struct:keyword
+keywordsN	ucl/keyword.h	/^static struct keyword keywordsN[] = $/;"	v	typeref:struct:keyword
+keywordsO	ucl/keyword.h	/^static struct keyword keywordsO[] = $/;"	v	typeref:struct:keyword
+keywordsP	ucl/keyword.h	/^static struct keyword keywordsP[] = $/;"	v	typeref:struct:keyword
+keywordsQ	ucl/keyword.h	/^static struct keyword keywordsQ[] = $/;"	v	typeref:struct:keyword
+keywordsR	ucl/keyword.h	/^static struct keyword keywordsR[] = $/;"	v	typeref:struct:keyword
+keywordsS	ucl/keyword.h	/^static struct keyword keywordsS[] = $/;"	v	typeref:struct:keyword
+keywordsT	ucl/keyword.h	/^static struct keyword keywordsT[] = $/;"	v	typeref:struct:keyword
+keywordsU	ucl/keyword.h	/^static struct keyword keywordsU[] = $/;"	v	typeref:struct:keyword
+keywordsV	ucl/keyword.h	/^static struct keyword keywordsV[] = $/;"	v	typeref:struct:keyword
+keywordsW	ucl/keyword.h	/^static struct keyword keywordsW[] = $/;"	v	typeref:struct:keyword
+keywordsX	ucl/keyword.h	/^static struct keyword keywordsX[] = $/;"	v	typeref:struct:keyword
+keywordsY	ucl/keyword.h	/^static struct keyword keywordsY[] = $/;"	v	typeref:struct:keyword
+keywordsZ	ucl/keyword.h	/^static struct keyword keywordsZ[] = $/;"	v	typeref:struct:keyword
+keywords_	ucl/keyword.h	/^static struct keyword keywords_[] = $/;"	v	typeref:struct:keyword
+kids	ucl/expr.h	/^	struct astExpression *kids[2];$/;"	m	struct:astExpression	typeref:struct:astExpression::astExpression
+label	ucl/ast.h	/^typedef struct label$/;"	s
+label	ucl/stmt.h	/^	Label label;$/;"	m	struct:astGotoStatement
+label	ucl/stmt.h	/^	Label label;$/;"	m	struct:astLabelStatement
+labels	ucl/decl.h	/^	Label labels;$/;"	m	struct:astFunction
+last	ucl/alloc.h	/^	struct mblock *last; $/;"	m	struct:heap	typeref:struct:heap::mblock
+lastv	ucl/symbol.h	/^	Symbol *lastv;$/;"	m	struct:functionSymbol
+lbrace	ucl/decl.h	/^	int lbrace;$/;"	m	struct:astInitializer
+len	ucl/decl.h	/^		int len;$/;"	m	union:typeDerivList::__anon4
+len	ucl/keyword.h	/^	int len;$/;"	m	struct:keyword
+len	ucl/str.h	/^	int len;$/;"	m	struct:nameBucket
+len	ucl/str.h	/^	int len;$/;"	m	struct:string
+len	ucl/vector.h	/^	int len;$/;"	m	struct:vector
+level	ucl/decl.h	/^	int level;$/;"	m	struct:tdname
+level	ucl/symbol.h	/^	int level;$/;"	m	struct:table
+lfiles	driver/ucc.h	/^	List lfiles;$/;"	m	struct:option
+lflags	driver/ucc.h	/^	List lflags;$/;"	m	struct:option
+line	ucl/input.h	/^	int line;$/;"	m	struct:coord
+line	ucl/input.h	/^	int line;$/;"	m	struct:input
+lineHead	ucl/input.h	/^	unsigned char *lineHead;$/;"	m	struct:input
+link	ucl/str.h	/^	struct nameBucket *link;$/;"	m	struct:nameBucket	typeref:struct:nameBucket::nameBucket
+link	ucl/symbol.h	/^	struct valueDef *link;$/;"	m	struct:valueDef	typeref:struct:valueDef::valueDef
+linput	driver/ucc.h	/^	List linput;$/;"	m	struct:option
+list	driver/ucc.h	/^typedef struct list$/;"	s
+locals	ucl/symbol.h	/^	Symbol locals;$/;"	m	struct:functionSymbol
+loops	ucl/decl.h	/^	Vector loops;$/;"	m	struct:astFunction
+lvalue	ucl/expr.h	/^	int lvalue  : 1;$/;"	m	struct:astExpression
+main	driver/reg.c	/^int main()$/;"	f
+main	driver/ucc.c	/^int main(int argc, char *argv[])$/;"	f
+main	ucl/ucl.c	/^int main(int argc, char *argv[])$/;"	f
+maxVal	ucl/stmt.h	/^	int maxVal;$/;"	m	struct:switchBucket
+mblock	ucl/alloc.h	/^struct mblock$/;"	s
+minVal	ucl/stmt.h	/^	int	minVal;$/;"	m	struct:switchBucket
+name	ucl/keyword.h	/^	char *name;$/;"	m	struct:keyword
+name	ucl/str.h	/^	char *name;$/;"	m	struct:nameBucket
+nameBucket	ucl/str.h	/^typedef struct nameBucket$/;"	s
+nbblock	ucl/symbol.h	/^	int nbblock;$/;"	m	struct:functionSymbol
+nbucket	ucl/stmt.h	/^	int nbucket;$/;"	m	struct:astSwitchStatement
+ncase	ucl/stmt.h	/^	int ncase;$/;"	m	struct:switchBucket
+next	driver/ucc.h	/^	struct list *next;$/;"	m	struct:list	typeref:struct:list::list
+next	ucl/alloc.h	/^	struct mblock *next;$/;"	m	struct:mblock	typeref:struct:mblock::mblock
+next	ucl/ast.h	/^	InitData next;$/;"	m	struct:initData
+next	ucl/ast.h	/^	struct label *next;$/;"	m	struct:label	typeref:struct:label::label
+next	ucl/decl.h	/^	struct typeDerivList *next;$/;"	m	struct:typeDerivList	typeref:struct:typeDerivList::typeDerivList
+next	ucl/gen.h	/^	struct bblock *next;$/;"	m	struct:bblock	typeref:struct:bblock::bblock
+next	ucl/gen.h	/^	struct cfgedge *next;$/;"	m	struct:cfgedge	typeref:struct:cfgedge::cfgedge
+next	ucl/gen.h	/^	struct irinst *next;$/;"	m	struct:irinst	typeref:struct:irinst::irinst
+next	ucl/symbol.h	/^	struct valueUse *next;$/;"	m	struct:valueUse	typeref:struct:valueUse::valueUse
+next	ucl/type.h	/^	struct field *next;$/;"	m	struct:field	typeref:struct:field::field
+nextBB	ucl/stmt.h	/^	BBlock nextBB;$/;"	m	struct:astSwitchStatement
+nextCase	ucl/stmt.h	/^	struct astCaseStatement *nextCase;$/;"	m	struct:astCaseStatement	typeref:struct:astCaseStatement::astCaseStatement
+ninst	ucl/gen.h	/^	int ninst;$/;"	m	struct:bblock
+no	ucl/gen.h	/^	int no;$/;"	m	struct:bblock
+nodeKind	ucl/ast.h	/^enum nodeKind $/;"	g
+npred	ucl/gen.h	/^	int npred;$/;"	m	struct:bblock
+nsucc	ucl/gen.h	/^	int nsucc;$/;"	m	struct:bblock
+offset	ucl/ast.h	/^	int offset;$/;"	m	struct:initData
+offset	ucl/symbol.h	/^	int offset;$/;"	m	struct:variableSymbol
+offset	ucl/type.h	/^	int offset;$/;"	m	struct:field
+ofiles	driver/ucc.h	/^	List ofiles;$/;"	m	struct:option
+oftype	driver/ucc.h	/^	int oftype;$/;"	m	struct:option
+op	ucl/expr.h	/^	int op : 16;$/;"	m	struct:astExpression
+op	ucl/symbol.h	/^	int op;$/;"	m	struct:valueDef
+opcode	ucl/gen.h	/^	int opcode;$/;"	m	struct:irinst
+opds	ucl/gen.h	/^	Symbol opds[3];$/;"	m	struct:irinst
+option	driver/ucc.h	/^struct option$/;"	s
+out	driver/ucc.h	/^	char *out;$/;"	m	struct:option
+outer	ucl/symbol.h	/^	struct table *outer;$/;"	m	struct:table	typeref:struct:table::table
+ownBB	ucl/symbol.h	/^	BBlock ownBB;$/;"	m	struct:valueDef
+p	ucl/lex.h	/^	void *p;$/;"	m	union:value
+paramDecls	ucl/decl.h	/^	AstNode paramDecls;$/;"	m	struct:astParameterTypeList
+paramTyList	ucl/decl.h	/^	AstParameterTypeList paramTyList;$/;"	m	struct:astFunctionDeclarator
+parameter	ucl/type.h	/^typedef struct parameter$/;"	s
+params	ucl/symbol.h	/^	Symbol params;$/;"	m	struct:functionSymbol
+params	ucl/type.h	/^	Vector params;$/;"	m	struct:signature
+partOfDef	ucl/decl.h	/^	int partOfDef;$/;"	m	struct:astFunctionDeclarator
+pfiles	driver/ucc.h	/^	List pfiles;$/;"	m	struct:option
+pflags	driver/ucc.h	/^	List pflags;$/;"	m	struct:option
+pos	ucl/type.h	/^	int pos;$/;"	m	struct:field
+ppline	ucl/input.h	/^	int ppline;$/;"	m	struct:coord
+preds	ucl/gen.h	/^	CFGEdge preds;$/;"	m	struct:bblock
+prev	ucl/gen.h	/^	struct bblock *prev;$/;"	m	struct:bblock	typeref:struct:bblock::bblock
+prev	ucl/gen.h	/^	struct irinst *prev;$/;"	m	struct:irinst	typeref:struct:irinst::irinst
+prev	ucl/stmt.h	/^	struct switchBucket *prev;$/;"	m	struct:switchBucket	typeref:struct:switchBucket::switchBucket
+print	driver/reg.c	/^void print(register int *a){$/;"	f
+qual	ucl/decl.h	/^		int qual;$/;"	m	union:typeDerivList::__anon4
+recordType	ucl/type.h	/^typedef struct recordType$/;"	s
+ref	ucl/ast.h	/^	int ref;$/;"	m	struct:label
+ref	ucl/gen.h	/^	int ref;$/;"	m	struct:bblock
+reg	ucl/type.h	/^	int  reg; $/;"	m	struct:parameter
+respBB	ucl/ast.h	/^	BBlock respBB;$/;"	m	struct:label
+respBB	ucl/stmt.h	/^	BBlock respBB;$/;"	m	struct:astCaseStatement
+respBB	ucl/stmt.h	/^	BBlock respBB;$/;"	m	struct:astDefaultStatement
+sclass	ucl/decl.h	/^	int sclass;$/;"	m	struct:astSpecifiers
+sig	ucl/decl.h	/^		Signature sig;$/;"	m	union:typeDerivList::__anon4
+sig	ucl/decl.h	/^	Signature sig;$/;"	m	struct:astFunctionDeclarator
+sig	ucl/type.h	/^	Signature sig; $/;"	m	struct:functionType
+signature	ucl/type.h	/^typedef struct signature$/;"	s
+size	ucl/input.h	/^	unsigned long size;$/;"	m	struct:input
+size	ucl/vector.h	/^	int size;$/;"	m	struct:vector
+specs	ucl/decl.h	/^	AstSpecifiers specs;$/;"	m	struct:astDeclaration
+specs	ucl/decl.h	/^	AstSpecifiers specs;$/;"	m	struct:astFunction
+specs	ucl/decl.h	/^	AstSpecifiers specs;$/;"	m	struct:astParameterDeclaration
+specs	ucl/decl.h	/^	AstSpecifiers specs;$/;"	m	struct:astStructDeclaration
+specs	ucl/decl.h	/^	AstSpecifiers specs;$/;"	m	struct:astTypeName
+src1	ucl/symbol.h	/^	Symbol src1;$/;"	m	struct:valueDef
+src2	ucl/symbol.h	/^	Symbol src2;$/;"	m	struct:valueDef
+stDecls	ucl/decl.h	/^	AstNode stDecls;$/;"	m	struct:astStructSpecifier
+stDecs	ucl/decl.h	/^	AstNode stDecs;$/;"	m	struct:astStructDeclaration
+stgClasses	ucl/decl.h	/^	AstNode stgClasses;$/;"	m	struct:astSpecifiers
+stmt	ucl/decl.h	/^	AstStatement stmt;$/;"	m	struct:astFunction
+stmt	ucl/stmt.h	/^	AstStatement  stmt;$/;"	m	struct:astCaseStatement
+stmt	ucl/stmt.h	/^	AstStatement  stmt;$/;"	m	struct:astSwitchStatement
+stmt	ucl/stmt.h	/^	AstStatement stmt;$/;"	m	struct:astDefaultStatement
+stmt	ucl/stmt.h	/^	AstStatement stmt;$/;"	m	struct:astLabelStatement
+stmts	ucl/stmt.h	/^	AstNode stmts;$/;"	m	struct:astCompoundStatement
+str	driver/ucc.h	/^	char *str;$/;"	m	struct:list
+string	ucl/str.h	/^typedef struct string$/;"	s
+succs	ucl/gen.h	/^	CFGEdge succs;$/;"	m	struct:bblock
+switchBucket	ucl/stmt.h	/^typedef struct switchBucket$/;"	s
+swtches	ucl/decl.h	/^	Vector swtches;$/;"	m	struct:astFunction
+sym	ucl/decl.h	/^	Symbol sym;$/;"	m	struct:astTypedefName
+sym	ucl/gen.h	/^	Symbol sym;$/;"	m	struct:bblock
+sym	ucl/gen.h	/^	Symbol sym;$/;"	m	struct:ilarg
+symbol	ucl/symbol.h	/^typedef struct symbol$/;"	s
+table	ucl/symbol.h	/^typedef struct table$/;"	s
+tail	ucl/stmt.h	/^	AstCaseStatement *tail;$/;"	m	struct:switchBucket
+tail	ucl/type.h	/^	Field *tail; $/;"	m	struct:recordType
+target	ucl/stmt.h	/^	AstLoopStatement target;$/;"	m	struct:astContinueStatement
+target	ucl/stmt.h	/^	AstStatement target;$/;"	m	struct:astBreakStatement
+tdname	ucl/decl.h	/^typedef struct tdname$/;"	s
+testBB	ucl/stmt.h	/^	BBlock testBB;$/;"	m	struct:astForStatement
+thenStmt	ucl/stmt.h	/^	AstStatement  thenStmt;$/;"	m	struct:astIfStatement
+tok	ucl/keyword.h	/^	int tok;$/;"	m	struct:keyword
+token	ucl/decl.h	/^	int token;$/;"	m	struct:astToken
+token	ucl/lex.h	/^enum token$/;"	g
+tokenOp	ucl/expr.h	/^struct tokenOp$/;"	s
+ty	ucl/decl.h	/^	Type ty;$/;"	m	struct:astSpecifiers
+ty	ucl/expr.h	/^	Type ty;$/;"	m	struct:astExpression
+ty	ucl/gen.h	/^	Type ty;$/;"	m	struct:ilarg
+ty	ucl/gen.h	/^	Type ty;$/;"	m	struct:irinst
+ty	ucl/type.h	/^	Type ty; $/;"	m	struct:parameter
+ty	ucl/type.h	/^	Type ty;$/;"	m	struct:field
+tyQuals	ucl/decl.h	/^	AstNode tyQuals;$/;"	m	struct:astPointerDeclarator
+tyQuals	ucl/decl.h	/^	AstNode tyQuals;$/;"	m	struct:astSpecifiers
+tySpecs	ucl/decl.h	/^	AstNode tySpecs;$/;"	m	struct:astSpecifiers
+type	ucl/type.h	/^typedef struct type$/;"	s
+typeDerivList	ucl/decl.h	/^typedef struct typeDerivList$/;"	s
+unused	ucl/expr.h	/^	int unused  : 11;$/;"	m	struct:astExpression
+uop	ucl/expr.h	/^	int uop  : 16;$/;"	m	struct:tokenOp
+uses	ucl/symbol.h	/^	ValueUse uses;$/;"	m	struct:variableSymbol
+va_arg	ucl/linux/include/stdarg.h	18;"	d
+va_end	ucl/linux/include/stdarg.h	19;"	d
+va_list	ucl/linux/include/stdarg.h	/^typedef __va_list va_list;$/;"	t
+va_start	ucl/linux/include/stdarg.h	17;"	d
+val	ucl/expr.h	/^	union value val;$/;"	m	struct:astExpression	typeref:union:astExpression::value
+valNumTable	ucl/symbol.h	/^	ValueDef valNumTable[16];$/;"	m	struct:functionSymbol
+value	ucl/lex.h	/^union value$/;"	u
+valueDef	ucl/symbol.h	/^typedef struct valueDef$/;"	s
+valueUse	ucl/symbol.h	/^typedef struct valueUse$/;"	s
+variableSymbol	ucl/symbol.h	/^typedef struct variableSymbol$/;"	s
+vector	ucl/vector.h	/^typedef struct vector$/;"	s
+verbose	driver/ucc.h	/^	int verbose;$/;"	m	struct:option
