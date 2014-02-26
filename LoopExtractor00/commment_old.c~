@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+/*ahhhhhhhhhhhhhhhhhhhhhhhhhhh
+
+
+hhjjjjj*/
+
+
+int main()
+{
+    int i,a=0;
+    for(i=0; i<100; i++ )
+        a++;
+    printf("%d/n",a);
+
+}
