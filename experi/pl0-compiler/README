@@ -1,0 +1,16 @@
+dependencies:
+	flex >= 2.5.33
+	qt >= 4.4.0
+	make
+	gcc
+	g++
+	pthread (available for windows)
+
+Linux:
+	make
+	./pl0-compiler
+
+Windows:
+	MinGW and MSYS are very helpfull to build and run the PL/0-Compiler
+	run make -f Makefile.win to compile
+

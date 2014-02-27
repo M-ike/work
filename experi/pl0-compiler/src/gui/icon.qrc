@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/icon" >
+        <file>images/donkey-48x48.png</file>
+        <file>images/folder.png</file>
+        <file>images/forward_green.png</file>
+        <file>images/forward_blue.png</file>
+        <file>images/forward_red.png</file>
+        <file>images/finish_blue.png</file>
+        <file>images/finish_green.png</file>
+        <file>images/finish_red.png</file>
+        <file>images/button_cancel.png</file>
+        <file>images/filesave.png</file>
+        <file>images/filesaveas.png</file>
+        <file>images/stop.png</file>
+        <file>images/new.png</file>
+        <file>images/interpreter.png</file>
+         <file>images/empty.png</file>
+
+
+        <file>images/flags/de.png</file>
+        <file>images/flags/gb.png</file>
+
+        <file>images/qt_logo.png</file>
+    </qresource>
+</RCC>

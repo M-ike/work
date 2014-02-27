@@ -1,0 +1,11 @@
+VAR  x;
+
+PROCEDURE mult(a, b)
+     PROCEDURE doWork(a, b) x := a * b;
+CALL doWork(a,b);
+
+BEGIN
+  CALL mult(2,3);
+  ! x
+END.
+

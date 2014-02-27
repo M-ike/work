@@ -1,0 +1,22 @@
+CXXFLAGS += -Wall -Werror
+
+BUILDDIR = ../../build/interpreter/
+
+SRCS = interpreter.cc
+
+INCPATH = -I/"C:\Qt\4.4.0\mkspecs\win32-g++" -I/"C:\Qt\4.4.0\include\QtCore"\
+          -I/"C:\Qt\4.4.0\include\QtGui" -I/"C:/Qt/4.4.0/include"\
+          -I../../include/win
+
+OBJS = $(patsubst %.cc,$(BUILDDIR)%.o,$(SRCS))
+DEBS = $(patsubst %.cc,$(BUILDDIR)%.d,$(SRCS))
+
+all: Makefile $(OBJS)
+
+-include $(DEBS)
+
+$(BUILDDIR)%.o: %.cc
+	g++ $(CXXFLAGS) $(INCPATH) -c $< -MD -o $@
+
+clean:
+	rm -f $(OBJS) $(DEBS) *~

@@ -1,0 +1,20 @@
+CONST
+  m =  7,
+  n = 85;
+
+VAR
+  x, y;
+
+BEGIN
+  x := m;
+  y := n;
+  ! x;
+  ! y;
+  ? x;
+  ! x
+END.
+
+
+
+
+

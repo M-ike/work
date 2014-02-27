@@ -1,0 +1,5 @@
+all: Makefile
+	make -f Makefile.win -C src
+
+clean:
+	make -f Makefile.win -C src clean

@@ -1,0 +1,95 @@
+CONST
+  m =  7,
+  n = 85;
+
+VAR
+  x, y, z, q, r;
+
+PROCEDURE multiply(foo1, foo2)
+VAR a, b;
+
+BEGIN
+  ? a;
+  a := x;
+  ! a;
+  b := y;
+  z := 0;
+  WHILE b > 0 DO BEGIN
+    IF ODD b THEN z := z + a;
+    a := 2 * a;
+    b := b / 2
+  END
+END;
+
+PROCEDURE divide()
+VAR w;
+
+   PROCEDURE a()
+   BEGIN
+        CALL multiply(3, 4)
+   END;
+
+   PROCEDURE multiply(a, b)
+   BEGIN
+        a := b
+   END;
+
+   PROCEDURE b()
+   BEGIN
+        CALL multiply(3, 4)
+   END;
+
+BEGIN
+  r := x;
+  q := 0;
+  w := y;
+  WHILE w <= r DO w := 2 * w;
+  WHILE w > y DO BEGIN
+    q := 2 * q;
+    w := w / 2;
+    IF w <= r THEN BEGIN
+      r := r - w;
+      q := q + 1
+    END
+  END
+END;
+
+PROCEDURE gcd()
+VAR f, g;
+BEGIN
+  f := 5;
+  g := 10;
+  WHILE f # g DO BEGIN
+    ! g;
+    g := g-1
+  END;
+  z := f
+END;
+
+BEGIN
+  x := m;
+  y := n;
+  CALL multiply(42, x+4);
+  x := 25;
+  y :=  3;
+  CALL divide();
+  x := 84;
+  y := 36;
+  CALL gcd()
+END.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+BUILDDIR = ../../build/
+
+SRC_FILES = $(wildcard ../gui/*.cc)
+
+all: Makefile
+	lupdate $(SRC_FILES) -ts de.ts
+	lrelease de.ts -qm $(BUILDDIR)de.qm
+
+clean:
+	rm -f $(BUILDDIR)*.qm *~

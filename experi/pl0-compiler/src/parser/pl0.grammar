@@ -1,0 +1,54 @@
+Program -> Block "."
+
+Block -> [Constants] [Variables] [Procedures] Statement
+
+Constants -> "CONST" ConstantDeclaration ("," ConstantDeclaration)* ";"
+
+Variables -> "VAR" VariableDeclaration ("," VariableDeclaration)* ";"
+
+Procedures -> (ProcedureDeclaration)+
+
+ConstantDeclaration -> Ident "=" Number
+
+VariableDeclaration -> Ident
+
+ProcedureDeclaration -> "PROCEDURE" Ident "(" [FormalParameters] ")" Block ";"
+
+FormalParameters -> VariableDeclaration ("," VariableDeclaration)*
+
+Statement -> AssignmentStatement | InputStatement | OutputStatement | CallStatement |
+             CompoundStatement | IfStatement | WhileStatement
+
+AssignmentStatement -> Ident ":=" Expression
+
+InputStatement -> "?" Ident
+
+OutputStatement -> "!" Expression
+
+CallStatement -> "CALL" Ident "(" [ActualParameters] ")"
+
+ActualParameters -> Expression ("," Expression)*
+
+CompoundStatement -> "BEGIN" Statement ( ";" Statement) "END"
+
+IfStatement -> "IF" Condition "THEN" Statement
+
+WhileStatement -> "WHILE" Condition "DO" Statement
+
+Expression -> FirstTerm [ ( "+" | "-" ) AdditionalExpression ]
+
+FirstTerm = ( "+" | "-" | eps ) Term
+
+AdditionalExpression -> Term [ ("+" | "-") AdditionalExpression ]
+
+Term -> Factor [ ("*" | "/") Term ]
+
+Factor -> Ident | Number | ParenthesisFactor
+
+ParenthesisFactor -> "(" Expression ")"
+
+Condition -> OddCondition | CompareCondition
+
+OddCondition -> "ODD" Expression
+
+CompareCondition -> Expression ("=" | "#" | "<" | "<=" | ">" | ">=") Expression
