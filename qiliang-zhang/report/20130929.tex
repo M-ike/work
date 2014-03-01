@@ -1,0 +1,18 @@
+\section{\hei{工作报告（2013.9.23-2013.9.29）}}
+\subsection{\hei{工作概要}}
+\kai{最近一段时间一直在看有关预处理的内容，一开始比较迷茫不知道该怎么入手，起初看clang/lib/Frontend/PrintPreprocessedOutput.cpp、clang/lib/Rewrite/Frontend目录下的InclusionRewriter.cpp和RewriteMacros.cpp,及涉及到的类}。
+
+\kai{MacroInfo:关于宏的一些基本信息，宏定义、结束、取消定义的位置，参数列表，tokens列表，以及他们相关的操作}。
+
+\kai{SourceLocation类：*Filename，Line，Column，以及对他们的操作。通过SourceManager类对于SourceLocation的转化可以得到相应的位置，可以得到For循环的在源代码中位置范围。}
+\kai{PPCallbacks类：当遇到不同的事件时，通过不同的接口，执行不同的操作。}
+
+\kai{之后看了预处理Driver.cpp,主要看了TheDriver.BuildCompilation(argv)，根据BuildInputs得到的Iputs,构建相应的动作，然后根据得到的参数构造ConstructPhaseAction(Args, Phase, Current.take())动作，得到相应的Actions。建立动作之后应该为Compilation建立jobs。}
+
+\subsection{\hei{遇到的问题}}
+\kai{关于怎么建立Action还没弄明白，以及后续的机制}
+\subsection{\hei{下周计划}}
+\kai{分离出源代码中的头文件和宏定义。}
+
+
+

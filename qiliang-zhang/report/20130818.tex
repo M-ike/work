@@ -1,0 +1,8 @@
+\section{\hei{暑假第五周工作报告}}
+\subsection{\hei{工作概要}}
+\begin{itemize}
+\item{看了llvm dot图一些代码和提供的接口，写成了文档放在了llvm-work/doc/intro/intro目录下。}
+\item{从源代码到llvm IR流程，创建一个Module、在Module中添加Function、在Function中添加BasicBlock、在BasicBlock中添加指令。看了llvm IR的一些代码Module.h,IRBuilder.h和Basicblock.h，对于其中的很多接口，怎么输出到.ll文件不太明白，还需要继续调研，完成了llvm IR与源代码之间的对应关系的文档，放在了llvm-work/doc/intro/intro中，一些例子放在了llvm-work/doc/intro/examples目录下，对于表达式对应的命令结合例子，参考\href{http://llvm.org/docs/LangRef.html}{LLVM Language Reference Manual}去了解。}
+\end{itemize}
+\subsection{存在的问题与不足}
+对于代码的整体结构把握不清楚。

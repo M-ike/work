@@ -1,0 +1,53 @@
+\section{\hei{获得位置的方法}}
+
+\subsection{\hei{AST层次上}}
+
+\begin{lstlisting}
+std::pair<std::pair,std::pair>Pair;
+ ForStmt *FS = *sFS;
+//第一种。
+//SourceManager SM = Context.getSourcemanager().
+     SourceRange SR = FS->getSourceRange();
+        SourceLocation SLB = SR.getBegin();
+        SourceLocation SLE = SR.getEnd();
+        PresumedLoc PLoc1 = SM.getPresumedLoc(SLB);
+        PresumedLoc PLoc2 = SM.getPresumedLoc(SLE);
+        Pair.first.first = PLoc1.getLine();
+        Pair.first.second = PLoc1.getColumn();
+        Pair.second.first = PLoc2.getLine();
+        Pair.second.second = PLoc2.getColumn();
+        //llvm::outs() << PLoc1.getLine() << "  " << PLoc2.getLine() << "\n";
+//第二种。
+        FullSourceLoc FullLocation1 = Context.getFullLoc(FS->getLocStart());
+        FullSourceLoc FullLocation2 = Context.getFullLoc(FS->getLocEnd());
+        Pair.first.first =FullLocation1.getSpellingLineNumber();
+        Pair.first.second =FullLocation1.getSpellingColumnNumber();
+        Pair.second.first =FullLocation2.getSpellingLineNumber();
+        Pair.second.second =FullLocation2.getSpellingColumnNumber();
+        LocRange[FS] = Pair;
+        llvm::outs() << LocRange[FS].first.first << "  " <<LocRange[FS].first.second << "\n";
+        llvm::outs() << LocRange[FS].second.first << "  " <<LocRange[FS].second.second << "\n";
+\end{lstlisting}
+
+\par{获取指定SourceLocation对应的标识符的开始位置和结束位置,}
+\begin{lstlisting}
+//获得语言的类型.
+const LangOptions &Lang = context.getLangOpts()
+SourceManager &SM = context.getSourceManager();
+    SourceLocation End = SR.getEnd();//得到一个语句最后一个标识符
+  //如果是宏,获得到宏开始和结束的位置
+ const std::pair<SourceLocation,SourceLocation> ExpansionLoc(SM.getExpansionRange(End));
+ const SourceLocation Ebegin = ExpansionLoc.first;
+//宏结束的位置,宏中最后一个标识符位置
+const SourceLocation EEnd = ExpansionLoc.second;
+//得到最后一个标识符的长度
+SourceLocation EndLoc(clang::Lexer::getLocForEndOfToken(EEnd, 1, SM, Lang));
+
+bool Invalid = false;
+//得到指向给定位置的指针
+const char *EEndptr = SM.getCharacterData(EndLoc,&Invalid);
+\end{lstlisting}
+
+\subsection{LLVM IR层上}
+
+\par{clang -g -emit-llvm -S hello.c -o a.ll,加上参数生产生.ll文件时,保留了对应的行信息,若获取的话可以从DebugInfo入手.}

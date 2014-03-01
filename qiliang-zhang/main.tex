@@ -1,0 +1,40 @@
+\newcommand\showchange{TT}%{TT FL}%
+\newcommand\hasalgo{FL}%{TT FL}
+%\documentclass[preprint]{../../share/sigplanconf}
+\documentclass[a4paper,11pt,titlepage]{article}
+
+\input local	% common local setting
+\input clocal	% common Chinese setting
+\newcommand{\bs}[0]{$\backslash$}
+\lstset{numbers=left,numberstyle=\tiny, %显示行号
+%keywordstyle=\color{blue!70}, commentstyle=\color{red!50!green!50!blue!50},
+}
+
+\begin{document}
+
+\title{\hei{工作报告}}
+%\subtitle{(Simplified Version)}
+%\authorinfo{Daochen Liu}
+\author{张其良\thanks{929434288@qq.com}}
+\affil{\hei{中国科学技术大学~~计算机科学与技术学院}}
+
+\maketitle %可以显示上边的信息
+\tableofcontents
+\setcounter{tocdepth}{3}
+\newpage
+% turn on page numbers
+%\pagestyle{empty}
+\pagenumbering{arabic}
+
+\input report/getLoction
+
+
+
+
+
+\begin{small}
+\bibliography{pa,book}
+\bibliographystyle{plain}
+\end{small}
+
+\end{document}

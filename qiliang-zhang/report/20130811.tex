@@ -1,0 +1,39 @@
+\section{\hei{暑假第四周工作报告}}
+
+\subsection{\hei{本周工作概要}}
+
+\begin{itemize}
+
+\item{关于dot画图，文档放在了llvm-work/doc/intro/目录下。}
+
+\item{主要熟悉了llvm IR的表示方法，参考这源代码，了解llvm IR每条命令所代表的含义以及与源代码的对应关系，自己也写了一些for、while、do while循环语句和if else、switch条件判断语句的例子，明白各种语句对应的模块（例如for循环，对应for.cond、for.body、for.inc、for.end），但是有些细节还是不明白，不明白使用\%retval这个变量的条件，还有各个基本块后面的数字表示等。用llc -march=cpp -o xx.cpp xx.ll命令，可以由xx.ll文件得到描述建立模块和基本块的xx.pp文件，关于打印相关信息的问题，现在还没有头绪。}
+
+\item{看了llvm/Support/GRaphWriter.h,向.dot文件写入相关的信息，类GraphWriter提供了writeGraph（），writeHeader，writeNodes()，writeFooter()，writeNode（），writeEdge（），emitEdge（）
+
+writeGraph（）：调用writeHeader(Title)将开头写入.dot文件中，之后调用writeNodes()将节点写入，再调用addcustomGRaphFeatures为图添加附加的信息，writeFooter()写文件的结尾。
+
+void writeHeader(const std::string \&Title)：写文件的开头digraph Title/Graphname/unnamed \{ rank=BT;label="Title/Graphname"。
+
+writeFooter()：写结尾"\}"。
+
+void writeNodes()：通过迭代器，循环扫描所有节点，调用writeNode(*I)写入节点信息。
+
+void writeNode(NodeType *Node)：为节点*node添加shape、label、地址信息、节点描述信息、以这个点为起点的边si、以这个点为终点的边di，通过迭代，调用witeEdge画这个点与其他点的边。
+
+void writeEdge(NodeType *Node, unsigned edgeidx, child\_iterator EI)：得到DestPort，TargetNode。调用emitEdge输出边的信息，写入Node SrcNodeID :s SrcNodePort-> Node DestNodeID :d DestNodeID[ Attrs ];
+
+另外还提供了输出简单节点的接口emitSimpleNode。
+ 
+}
+\item{看了c++ Primer plus，简单过了一遍前面的基础知识，看到了地10章对象与类。}
+\end{itemize}
+
+\subsection{\hei{问题与不足}}
+代码的表示不太习惯，看的有点晕。
+
+\subsection{\hei{下一周的计划}}
+1）继续调研llvm IR与源代码的关系。
+
+2）继续看画图的相关的类与代码。
+
+3）接着看c++。

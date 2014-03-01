@@ -1,0 +1,61 @@
+\section{\hei{函数调用图}}
+
+
+
+================================================================
+
+
+
+\subsection{\hei{第一部分：收集所需要的信息}}
+\kai{信息的存放}
+\begin{itemize}
+
+\item{typedef DenseMap<Module*, SetVector<Function*> > FunctionList;维护Module<->Function关系,存放这函数信息。}
+
+\item{typedef DenseMap<Function*, SetVector<CallInst*> > CallInstList;维护Function<->CallSite关系,存放着函数调用的调用函数信息。}
+
+\item{typedef std::map<Function*, std::map<std::string, int> > CallInstRef;维护CallInst的引用计数信息,在某一个函数中，调用函数被引用的次数，用于画图时，添加边的信息。}
+
+\item{typedef DenseMap<Function*, std::pair<bool, bool> > FunctionStack;维护函数的状态信息,是否被访问过。} 
+
+\end{itemize}
+\kai{信息收集的接口}
+
+\begin{itemize}
+
+\item{insertFunctionToList(Module *M, Function *F):将模块M中的F插入到对应的列表中。}
+\item{insertCallInstToList(Function *F, CallInst *CI),将模块F中的调用函数插入到对应的列表中。}
+\item{insertCallInstRef(Function *F, std::string CallName, int count),收集F调用CallName的次数。}
+\item{getCallInstofFunction(Function *F):由给出的F，获得他调用的函数集合。}
+\item{getCountofCallInst(Function *F, std::string callName):通过F先得到std::map<std::string, int>，在利用callName获取函数F调用callName的次数。}
+\item{insertFunctionToStack:保存着函数F的访问状态。}
+\item{isFunctionVisiting(Function *F)和isFunctionVisited(Function *F)，保存在FunctionStack.second,即std::pair<bool, bool>中。}
+\end{itemize}
+
+
+\kai{收集信息的过程}
+\begin{itemize}
+\item{在main.cpp中循环访问的ModuleList,对每一个Module进行访问，通过collectCallSiteInfo(Module *M)收集模块中的函数信息。}
+
+\item{collectCallSiteInfo(Module *M):对于某一个模块M,首先遍历模块中顶层函数，并插入到Flist,当遇到一个函数时收集其中的CallInst，保存在F对应的CIList中。}
+
+\end{itemize}
+\par{由上面两步，可以得到FunctionList和CallInstList，之后在写.dot文件中在进行相应的处理。}
+
+\par{其他接口}
+\par{1.getFunctionName(Function *F)，由于函数在内部的命名规则，\_Z + 函数名的长度 + 函数名 + 后面表示参数的字符串，这个接口返回的是函数名。}
+\par{2.getCallInstName(CallInst *I),返回被调用函数的函数名称。}
+
+\par{3.getCallRef(CallInstList *CIL)函数用于消除DenseMap中的重复项目;对于没一个函数F,迭代访问F对应的callinst的每一项，得到调用指令被引用的次数。调用insertCallInstRef(F, getCallInstName(A), CallInstCount)保存被调用函数和被调用的次数的信息。}
+
+
+================================================================================
+
+
+\subsection{第二部分：dot图的生成}
+\par{1.从给出的名字出发调用generateDotGraph(std::string RootFunctionName)，写相应的.dot文件}
+\par{2.生成dot图，主要是利用前面收集到的\en{CallInstList* CIL=BIDB.getCallInstList()}，利用BIDB.getCallInstRef()将CallInstList，中的重复项去除，并添加调用的次数信息。}
+\par{3.经过步骤2后，所得到一个函数链以及函数调用相应的函数链。之后，由给出的根节点rootFunctionName，在CIL中查找对应的rootFunction,然后写dot文件的头部(参考怎么画dot图)。}
+\par{4.从rootFunction出发，写相关的点和边的信息,对于写相关的点和边的信息，调用writeNode(File, rootFunction, CIL)（关于怎么写点和边的信息参考dot图的画法），接着访问SetVector<CallInst*>中rootFunction调用的每一个函数，递归调用writeNode,到达底层函数（即没有调用其他函数的函数）或已经被访问过的函数返回。在递归调用的同时，设置函数的访问信息，返回时，设置此函数的状态已经被访问。若正在被访问的函数，若再一次被访问，则表示有循环调用了，之后写出rootFunction到每一个调用函数的的边信息，边的信息通过getCountofCallInst(F, getCallInstName(CI))获得。访问完后，并设置函数的状态信息。}
+\par{5.接着写dot文件的尾部。}
+\par{注：关于写.dot文件的格式，可参考llvm-work/doc/intro/intro/Graphwriter.tex }

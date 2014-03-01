@@ -1,0 +1,197 @@
+\section{\hei{Location}}
+\subsection{\hei{Lexer}}
+\begin{lstlisting}
+clang/lib/Lex/Lexer.cpp
+2917   case '+': 
+2918     Char = getCharAndSize(CurPtr, SizeTmp); 
+2919     if (Char == '+') { 
+2920       CurPtr = ConsumeChar(CurPtr, SizeTmp, Result); 
+2921       Kind = tok::plusplus; 
+2922     } else if (Char == '=') { 
+2923       CurPtr = ConsumeChar(CurPtr, SizeTmp, Result); 
+2924       Kind = tok::plusequal; 
+2925     } else { 
+2926       Kind = tok::plus; 
+2927     } 
+2928     break;
+\end{lstlisting}
+
+\par{这一段代码,当遇到一个+号时,通过getCharAndSize(CurPtr, SizeTmp)获取后面的字符,char=='+',用ConsumeChar(CurPtr, SizeTmp, Result)对获的字符以及前一个字符进行处理.其他的类似.}
+\begin{lstlisting}
+clang/include/clang/Lex/Lexer.h
+ 
+inline char getCharAndSize(const char *Ptr, unsigned &Size) { 
+    // If this is not a trigraph and not a UCN or escaped newline, return 
+    // quickly. 
+    if (isObviouslySimpleCharacter(Ptr[0])) { 
+      Size = 1;     
+      return *Ptr; 
+    }                           
+
+    Size = 0; 
+    return getCharAndSizeSlow(Ptr, Size); 
+  } 
+
+ static bool isObviouslySimpleCharacter(char C) { 
+    return C != '?' && C != '\\'; 
+  } 
+\end{lstlisting}
+\par{getCharAndSize:判断当前的指针指向的字符,是否是简单的字符(isObviouslySimpleCharacter(Ptr[0])),不是?(??X)或'\\'(转移字符),是简单字符就返回指针指向的字符.}
+\begin{lstlisting}
+clang/include/clang/Lex/Lexer.h 
+ const char *ConsumeChar(const char *Ptr, unsigned Size, Token &Tok) { 
+    // Normal case, we consumed exactly one token.  Just return it. 
+    if (Size == 1) 
+      return Ptr+Size; 
+
+    // Otherwise, re-lex the character with a current token, allowing 
+    // diagnostics to be emitted and flags to be set. 
+    Size = 0; 
+    getCharAndSizeSlow(Ptr, Size, &Tok); 
+    return Ptr+Size; 
+  }
+\end{lstlisting}
+
+\par{ConsumeChar:当能判断获得的字符和前面获得的是在一起时,调用ConsumeChar将和前面的字符组合到一块,如++(plusplus),当判断到第一个'+',就获取后面的一个字符,如果是'+'可判断是token:plusplus,是'=' 也能判断'+='为一个token,否则'+'就作为一个token(plus)处理.当处理完之后,返回Ptr+Size,Ptr+Size之前的已经被”消费”.
+
+
+关于getCharAndSizeSlow主要是针对转义字符'\\',三字符型'??\_',进行相应的处理.}
+
+
+
+关于位置信息,
+\begin{lstlisting}
+clang/lib/Lex/Lexer.cpp
+
+1165 /// getSourceLocation - Return a source location identifier for the specified 
+1166 /// offset in the current file. 
+1167 SourceLocation Lexer::getSourceLocation(const char *Loc, 
+1168                                         unsigned TokLen) const { 
+1169   assert(Loc >= BufferStart && Loc <= BufferEnd && 
+1170          "Location out of range for this buffer!"); 
+1171  
+1172   // In the normal case, we're just lexing from a simple file buffer, return 
+1173   // the file id from FileLoc with the offset specified. 
+1174   unsigned CharNo = Loc-BufferStart; 
+1175   if (FileLoc.isFileID()) 
+1176     return FileLoc.getLocWithOffset(CharNo); 
+1177  
+1178   // Otherwise, this is the _Pragma lexer case, which pretends that all of the 
+1179   // tokens are lexed from where the _Pragma was defined. 
+1180   assert(PP && "This doesn't work on raw lexers"); 
+1181   return GetMappedTokenLoc(*PP, FileLoc, CharNo, TokLen); 
+1182 }
+\end{lstlisting}
+\par{getSourceLocation,通过当前的指针Loc和BufferStart,得到相对与文件开始位置FileLoc的偏移量CharNo,再由getLocWithOffset(CharNo)得当前指针对应的位置信息.  对于 GetMappedTokenLoc不是太明白.}
+
+\begin{lstlisting}
+clang/lib/Lex/Lexer.cpp
+385 /// MeasureTokenLength - Relex the token at the specified location and return 
+ 386 /// its length in bytes in the input file.  If the token needs cleaning (e.g. 
+ 387 /// includes a trigraph or an escaped newline) then this count includes bytes 
+ 388 /// that are part of that.      
+ 389 unsigned Lexer::MeasureTokenLength(SourceLocation Loc, 
+ 390                                    const SourceManager &SM, 
+ 391                                    const LangOptions &LangOpts) { 
+ 392   // TODO: this could be special cased for common tokens like identifiers, ')', 
+ 393   // etc to make this faster, if it mattered.  Just look at StrData[0] to handle 
+ 394   // all obviously single-char tokens.  This could use 
+ 395   // Lexer::isObviouslySimpleCharacter for example to handle identifiers or 
+ 396   // something. 
+ 397  
+ 398   // If this comes from a macro expansion, we really do want the macro name, not 
+ 399   // the token this macro expanded to. 
+ 400   Loc = SM.getExpansionLoc(Loc);    
+ 401   std::pair<FileID, unsigned> LocInfo = SM.getDecomposedLoc(Loc); 
+ 402   bool Invalid = false;             
+ 403   StringRef Buffer = SM.getBufferData(LocInfo.first, &Invalid); 
+ 404   if (Invalid) 
+ 405     return 0; 
+ 406  
+ 407   const char *StrData = Buffer.data()+LocInfo.second; 
+ 408  
+ 409   if (isWhitespace(StrData[0]))     
+ 410     return 0;                       
+ 411 
+ 412   // Create a lexer starting at the beginning of this token. 
+ 413   Lexer TheLexer(SM.getLocForStartOfFile(LocInfo.first), LangOpts, 
+ 414                  Buffer.begin(), StrData, Buffer.end()); 
+ 415   TheLexer.SetCommentRetentionState(true); 
+ 416   Token TheTok; 
+ 417   TheLexer.LexFromRawLexer(TheTok); 
+ 418   return TheTok.getLength(); 
+ 419 }
+\end{lstlisting}
+\par{MeasureTokenLength:从给定的位置SourceLocation Loc出发,获取在这个位置上的Token的长度.先获得Token.然后getLength()获得长度.在类Token的私有成员中,只有token的开始位置和长度,并没有保留结束位置.}
+
+\subsection{\hei{SourceRange}}
+
+另外从sourceRange出发,对于表达式”sum+inc”,BinaryOperator表达式的范围:
+\begin{lstlisting}
+clang/include/clang/AST/Expr.h
+ 2867   SourceRange getSourceRange() const LLVM_READONLY {
+2868     return SourceRange(getLHS()->getLocStart(), getRHS()->getLocEnd());
+2869   }
+\end{lstlisting}
+
+getLHS()得到的是一个DeclRefExpr类型的表达式.
+\begin{lstlisting}
+clang/lib/AST/Expr.cpp
+ 455 SourceLocation DeclRefExpr::getLocStart() const {
+ 456   if (hasQualifier())
+ 457     return getQualifierLoc().getBeginLoc();
+ 458   return getNameInfo().getLocStart();
+ 459 }
+ 460 SourceLocation DeclRefExpr::getLocEnd() const {
+ 461   if (hasExplicitTemplateArgs())
+ 462     return getRAngleLoc();
+ 463   return getNameInfo().getLocEnd();
+ 464 }
+\end{lstlisting}
+
+\par{得到的DeclRefExpr的开始和结束位置,不考虑if中的条件,getNameInfo().getLocStart()和getNameInfo().getLocEnd()获得的是开始和结束位置.}
+
+\par{getNameInfo()的到的是一个 DeclarationNameInfo类.}
+\begin{lstlisting}
+clang/include/clang/AST/DeclarationName.h
+425 struct DeclarationNameInfo {
+426 private:
+427   /// Name - The declaration name, also encoding name kind.
+428   DeclarationName Name;
+429   /// Loc - The main source location for the declaration name.
+430   SourceLocation NameLoc;
+431   /// Info - Further source/type location info for special kinds of names.
+432   DeclarationNameLoc LocInfo;
+.
+.
+ /// getBeginLoc - Retrieve the location of the first token.
+523   SourceLocation getBeginLoc() const { return NameLoc; }
+524   /// getEndLoc - Retrieve the location of the last token.
+525   SourceLocation getEndLoc() const;
+.
+.
+.
+532   SourceLocation getLocStart() const LLVM_READONLY {
+533     return getBeginLoc();
+534   }
+535   SourceLocation getLocEnd() const LLVM_READONLY {
+536     SourceLocation EndLoc = getEndLoc();
+537     return EndLoc.isValid() ? EndLoc : getLocStart();
+538   }
+\end{lstlisting}
+\par{getLocStart()调用getBeginLoc()直接返回NameLoc,getLocEnd()调用getEndLoc()获取位置信息.}
+\begin{lstlisting}
+getEndLoc():
+clang/lib/AST/DeclarationName.cpp
+545 SourceLocation DeclarationNameInfo::getEndLoc() const {
+546   switch (Name.getNameKind()) {
+547   case DeclarationName::Identifier:
+548     return NameLoc;
+549 
+550   case DeclarationName::CXXOperatorName: {
+551     unsigned raw = LocInfo.CXXOperatorName.EndOpNameLoc;
+552     return SourceLocation::getFromRawEncoding(raw);
+553   }
+…
+\end{lstlisting}
+\par{getEndLoc()根据名字的类型判断结束位置.只是标识符时,返回的还是NameLoc,开始位置和结束位置一样,对于”sum+inc” 位置范围:开始位置sum的第一个字符,结束位置inc的结束位置,即inc的第一个字符.}
